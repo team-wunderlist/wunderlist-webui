@@ -1,1 +1,1 @@
-# wunderlist-webui
+# Splash Page for WunderList 2.0
