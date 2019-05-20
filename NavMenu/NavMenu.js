@@ -14,7 +14,7 @@ class NavButton {
 
     createElements() {
         this.button = document.createElement("button");
-        this.button.classList("nav-button");
+        this.button.classList.add("nav-button");
 
         this.spans = [];
         for (let _i = 0; _i < 3; _i++) {
