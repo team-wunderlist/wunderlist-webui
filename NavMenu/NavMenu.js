@@ -93,7 +93,9 @@ class NavButton {
         this.menu = new NavMenu(root, this);
 
         this.button.addEventListener("click", this.buttonClick.bind(this));
-        window.addEventListener("scroll", this.changeColor.bind(this));
+        window.addEventListener("scroll", this.checkColor.bind(this));
+
+        this.currentColor = "#F2F2F2"; // TODO: refactor colors
     }
 
     createElements() {
@@ -114,21 +116,28 @@ class NavButton {
     buttonClick(e) {
         e.stopPropagation();
         this.menu.open();
+        if (this.menu.nav.classList.contains("open")){
+            this.changeButtonColor("#F2F2F2");
+        } else {
+            this.changeButtonColor(this.currentColor);
+        }
     }
-    changeColor() {
+    changeButtonColor(color){
+        this.spans.forEach((span) => {
+            span.style.borderColor = color;
+        })
+    }
+    checkColor() {
         let bg = document.querySelector(".background");
         let bgRect = bg.getBoundingClientRect();
         let bgRadius = parseInt(getComputedStyle(bg).borderRadius);
         let roundedDistanceFromTop = bgRect.y + bgRect.height - ((bgRadius * Math.sqrt(2)) - bgRadius); // BoundingBox to top - diagonal difference between border and bounding box
-        console.log(roundedDistanceFromTop);
         if (roundedDistanceFromTop < 0) {
-            this.spans.forEach((span) => {
-                span.style.borderColor = "#262122";
-            })
+            this.currentColor = "#262122"; // TODO: refactor colors
+            this.changeButtonColor(this.currentColor);
         } else {
-            this.spans.forEach((span) => {
-                span.style.borderColor = "#F2F2F2";
-            })
+            this.currentColor = "#F2F2F2"; // TODO: refactor colors
+            this.changeButtonColor(this.currentColor);
         }
         // I tried to check the element underneath for it's color. It kind of worked but not well. Will do manually with the background
 
