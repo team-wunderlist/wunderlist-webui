@@ -165,9 +165,28 @@ a img {
   border: 0.05rem solid #F2F2F2;
   height: 80%;
 }
+.nav-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  width: 5rem;
+  height: 3rem;
+}
+.nav-button span {
+  width: 100%;
+  border: 0.1rem solid #F2F2F2;
+}
+:root {
+  font-size: 62.5%;
+}
 *,
 html {
-  font-size: 62.5%;
   font-size: inherit;
   box-sizing: border-box;
 }
@@ -221,14 +240,14 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 .top-section h1 {
-  font-size: 3.2rem;
+  font-size: 5.4rem;
   font-weight: 500;
 }
 .top-section h2 {
   margin: 0 auto;
   font-weight: 300;
-  font-size: 1.8rem;
-  width: 70%;
+  font-size: 2.4rem;
+  width: 60%;
 }
 .top-section button {
   font-family: 'Roboto Condensed', sans-serif;
@@ -237,10 +256,10 @@ body {
   background: #262122;
   border: none;
   box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2rem;
+  border-radius: 3rem;
   color: #F2F2F2;
   width: 80%;
-  height: 4rem;
+  height: 6rem;
 }
 hidden {
   display: none;
