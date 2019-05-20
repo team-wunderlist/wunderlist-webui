@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0;
 }
+body {
+  width: 100%;
+}
 @media (min-width:600px) {
   body {
     width: 900px;
@@ -26,6 +29,9 @@ h6 {
 }
 h1 {
   text-align: center;
+}
+img {
+  width: 100%;
 }
 header {
   display: flex;
@@ -177,6 +183,7 @@ header nav .navContainer .current {
   bottom: 0;
   margin: 0.5rem;
   color: white;
+  background-color: black;
 }
 .card-container .card-data .card-text {
   width: 100%;
