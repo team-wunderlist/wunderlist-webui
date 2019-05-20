@@ -3,6 +3,10 @@ class NavMenu {
         this.root = root;
         this.button = button;
 
+        this.createMenu();
+        this.createItems();
+
+        this.appendMenu();
     }
 
     createMenu() {
@@ -24,19 +28,24 @@ class NavMenu {
         this.items[3].textContent = "About Us";
     }
 
+    appendMenu() {
+        this.items.forEach((item) => this.nav.appendChild(item));
+        this.root.appendChild(this.nav);
+    }
+
     open() {
         if (this.nav.classList.contains("open")) {
-            animateClose();
+            this.animateClose();
         } else {
-            animateOpen();
+            this.animateOpen();
         }
         this.nav.classList.toggle("open");
     }
     animateOpen() {
-
+        this.nav.style.display = "flex";
     }
     animateClose() {
-
+        this.nav.style.display = "none";
     }
 }
 
