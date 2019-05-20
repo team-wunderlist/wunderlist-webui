@@ -1,6 +1,42 @@
 class NavMenu {
-    constructor() {
-        
+    constructor(root, button) {
+        this.root = root;
+        this.button = button;
+
+    }
+
+    createMenu() {
+        this.nav = document.createElement("nav");
+        this.nav.classList.add("mobile-nav");
+        this.nav.style.display = "none";
+    }
+
+    createItems() {
+        this.items = [];
+        this.items[0] = document.createElement("a");
+        this.items[1] = document.createElement("a");
+        this.items[2] = document.createElement("a");
+        this.items[3] = document.createElement("a");
+
+        this.items[0].textContent = "Home";
+        this.items[1].textContent = "Login";
+        this.items[2].textContent = "Sign Up";
+        this.items[3].textContent = "About Us";
+    }
+
+    open() {
+        if (this.nav.classList.contains("open")) {
+            animateClose();
+        } else {
+            animateOpen();
+        }
+        this.nav.classList.toggle("open");
+    }
+    animateOpen() {
+
+    }
+    animateClose() {
+
     }
 }
 
