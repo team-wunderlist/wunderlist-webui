@@ -116,7 +116,11 @@ class NavButton {
         this.menu.open();
     }
     changeColor() {
-
+        let bg = document.querySelector(".background");
+        let bgRect = bg.getBoundingClientRect();
+        console.log("Rect", bgRect);
+        console.log("radius",  parseInt(getComputedStyle(bg).borderRadius));
+        console.log(bgRect.y + bgRect.height - parseInt(getComputedStyle(bg).borderRadius));
         // I tried to check the element underneath for it's color. It kind of worked but not well. Will do manually with the background
 
 /*         let navPosition = this.button.getBoundingClientRect();
@@ -138,12 +142,14 @@ class NavButton {
 }
 
 function NavMenuCalculateBoundingBox(element){
-    var bx = element.clientWidth; // Width of rectangle
-    var by = element.clientHeight; // Height of rectangle
-    var t = /[0-9]+/.exec(element.style.transform)[0] * Math.PI / 180; // Convert to radians
+    let bx = element.clientWidth; // Width of rectangle
+    let by = element.clientHeight; // Height of rectangle
+    let style = getComputedStyle(element);
+    let t = /[0-9]+/.exec(style.transform)[0] * Math.PI / 180; // Convert to radians
 
-    var x = Math.sin(t) * by + Math.cos(t) * bx; // The bounding box width
-    var y = Math.sin(t) * bx + Math.cos(t) * by; // The bounding box height
+    let x = Math.sin(t) * by + Math.cos(t) * bx; // The bounding box width
+    let y = Math.sin(t) * bx + Math.cos(t) * by; // The bounding box height
+    return {x: x, y: y};
 }
 
 function ColorIslight(color) {
