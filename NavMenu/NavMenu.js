@@ -1,3 +1,5 @@
+const NavMenuAnimationDur = .3;
+
 class NavMenu {
     constructor(root, button) {
         this.root = root;
@@ -46,9 +48,10 @@ class NavMenu {
         }
     }
     animateOpen() {
+        this.menuMoving = true;
         this.nav.style.display = "flex";
         let diagonal = Math.sqrt((window.innerHeight ** 2) +(window.innerWidth ** 2));
-        TweenMax.fromTo(this.nav, 0.5,
+        TweenMax.fromTo(this.nav, NavMenuAnimationDur,
             {
                 webkitClipPath: "circle(0px at 100% 0)",
                 clipPath: "circle(0px at 100% 0)"
@@ -57,9 +60,26 @@ class NavMenu {
                 webkitClipPath: `circle(${diagonal}px at 100% 0)`,
                 clipPath: `circle(${diagonal}px at 100% 0)`
             });
+        setTimeout(() => {
+            this.menuMoving = false;
+        }, NavMenuAnimationDur * 1000);
     }
     animateClose() {
-        this.nav.style.display = "none";
+        this.menuMoving = true;
+        let diagonal = Math.sqrt((window.innerHeight ** 2) +(window.innerWidth ** 2));
+        TweenMax.fromTo(this.nav, NavMenuAnimationDur,
+            {
+                webkitClipPath: `circle(${diagonal}px at 100% 0)`,
+                clipPath: `circle(${diagonal}px at 100% 0)`
+            },
+            {
+                webkitClipPath: "circle(0px at 100% 0)",
+                clipPath: "circle(0px at 100% 0)"
+            });
+        setTimeout(() => {
+            this.nav.style.display = "none";
+            this.menuMoving = false;
+        }, NavMenuAnimationDur * 1000);
     }
 }
 
