@@ -116,8 +116,17 @@ class NavButton {
     }
     changeColor() {
         let navPosition = this.button.getBoundingClientRect();
-        let elementBelow = document.elementFromPoint(navPosition.top, navPosition.left);
-
+        let elementBelow = document.elementFromPoint(navPosition.top + 1, navPosition.left + 1);
+        let color = getComputedStyle(elementBelow).color;
+        if (ColorIslight(color)) {
+            this.button.spans.forEach((span) => {
+                span.style.borderColor = "#262122";
+            })
+        } else {
+            this.button.spans.forEach((span) => {
+                span.style.borderColor = "#F2F2F";
+            })
+        }
     }
 
     
