@@ -24,8 +24,12 @@ class NavBar {
         this.registerTab.classList.add("register-tab");
 
         this.signUp = document.createElement("button");
+        this.signUp.textContent = "Sign Up";
+
         this.buttonDevider = document.createElement("span");
+
         this.login = document.createElement("button");
+        this.login.textContent = "Login";
 
         this.registerTab.appendChild(this.signUp);
         this.registerTab.appendChild(this.buttonDevider);
