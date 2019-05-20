@@ -24,6 +24,9 @@ h6 {
   padding: 0;
   font-size: 1rem;
 }
+h1 {
+  text-align: center;
+}
 header {
   display: flex;
   flex-direction: row;
@@ -187,6 +190,23 @@ header nav .navContainer .current {
 }
 .card-container .card-data .card-text p {
   font-size: 0.75rem;
+}
+.card-container .card-data .card-text .github {
+  border: 1px black solid;
+  border-radius: 0.25rem;
+  border-radius: 1rem;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  width: 25%;
+  padding: 0.25rem;
+  background-color: #8282e8;
+}
+.card-container .card-data .card-text .github a {
+  text-align: center;
+  text-decoration: none;
+  padding: 0.25rem;
+  color: black;
 }
 .card-container .card-data button {
   margin: auto;
