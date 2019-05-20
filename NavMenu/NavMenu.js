@@ -46,6 +46,10 @@ class NavButton {
 
         this.createElements();
         this.appendToRoot();
+
+        this.menu = new NavMenu(root, this);
+
+        this.button.addEventListener("click", this.buttonClick.bind(this));
     }
 
     createElements() {
@@ -61,6 +65,11 @@ class NavButton {
     }
     appendToRoot() {
         this.root.appendChild(this.button);
+    }
+
+    buttonClick(e) {
+        e.stopPropagation();
+        this.menu.open();
     }
 }
 
