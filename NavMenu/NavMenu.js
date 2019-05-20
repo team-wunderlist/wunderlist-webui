@@ -120,7 +120,7 @@ class NavButton {
         let bgRect = bg.getBoundingClientRect();
         console.log("Rect", bgRect);
         console.log("radius",  parseInt(getComputedStyle(bg).borderRadius));
-        console.log(bgRect.y + bgRect.height - parseInt(getComputedStyle(bg).borderRadius));
+        console.log(bgRect.y + bgRect.height - (parseInt(getComputedStyle(bg).borderRadius) * Math.sqrt(2) - parseInt(getComputedStyle(bg).borderRadius)));
         // I tried to check the element underneath for it's color. It kind of worked but not well. Will do manually with the background
 
 /*         let navPosition = this.button.getBoundingClientRect();
