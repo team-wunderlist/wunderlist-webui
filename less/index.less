@@ -13,6 +13,7 @@
 }
 *, html{
     font-size: inherit;
+    font-family: inherit;
     box-sizing: border-box;
 }
 body {
@@ -55,7 +56,7 @@ body {
     justify-content: flex-end;
     padding-bottom: 5vh;
     color: @colorWhite;
-    font-family: 'Roboto', sans-serif;
+    font-family: @roboto;
     font-style: normal;
     text-align: center;
 
@@ -66,7 +67,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: @robotoCondensed;
     }
     h1{
         font-size: 5.4rem;
@@ -79,7 +80,7 @@ body {
         width: 60%;
     }
     button{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: @robotoCondensed;
         margin-top: 2rem;
         font-size: 2.4rem;
         background:@colorBlack;
