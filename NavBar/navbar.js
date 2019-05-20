@@ -40,6 +40,8 @@ class NavBar {
         this.nav.appendChild(this.logo);
         this.nav.appendChild(this.registerTab);
 
-        this.root.appendChild(this.header);
+        this.root.insertBefore(this.header, this.root.firstChild);
     }
 }
+
+new NavBar(document.body);
