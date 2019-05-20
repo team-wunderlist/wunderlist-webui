@@ -114,6 +114,59 @@ class NavButton {
         e.stopPropagation();
         this.menu.open();
     }
+    changeColor() {
+        let navPosition = this.button.getBoundingClientRect();
+        let elementBelow = document.elementFromPoint(navPosition.top, navPosition.left);
+
+    }
+
+    
 }
 
+function NavMenuCalculateBoundingBox(element){
+    var bx = element.clientWidth; // Width of rectangle
+    var by = element.clientHeight; // Height of rectangle
+    var t = /[0-9]+/.exec(element.style.transform)[0] * Math.PI / 180; // Convert to radians
+
+    var x = Math.sin(t) * by + Math.cos(t) * bx; // The bounding box width
+    var y = Math.sin(t) * bx + Math.cos(t) * by; // The bounding box height
+}
+
+function ColorIslight(color) {
+    var r, g, b, hsp;
+
+    if (color.match(/^rgb/)) {
+
+        // If HEX --> store the red, green, blue values in separate variables
+        color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
+        
+        r = color[1];
+        g = color[2];
+        b = color[3];
+    } 
+    else {
+        
+        // RGB to HEX
+        color = +("0x" + color.slice(1).replace( 
+        color.length < 5 && /./g, '$&$&'));
+        
+        //Bitshift hex
+        r = color >> 16;
+        g = color >> 8 & 255;
+        b = color & 255;
+    }
+    hsp = Math.sqrt(
+    0.299 * (r * r) +
+    0.587 * (g * g) +
+    0.114 * (b * b)
+    );
+    if (hsp>127.5) {
+
+        return true;
+    } 
+    else {
+
+        return false;
+    }
+}
 new NavButton(document.body);
