@@ -1,5 +1,6 @@
 .nav-button {
     position: fixed;
+    z-index: 1000;
     top: 1rem;
     right: 1rem;
     display: flex;
@@ -8,10 +9,12 @@
     align-items: center;
     border: none;
     background-color: transparent;
-    width: 5rem;
-    height: 3rem;
+    width: 4rem;
+    height: 2rem;
     span {
-        width: 100%;
+        min-width: 4rem;
+        height: 0.1rem;
+        display: block;
         border: 0.1rem solid @colorWhite;
     }
 }

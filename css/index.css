@@ -167,6 +167,7 @@ a img {
 }
 .nav-button {
   position: fixed;
+  z-index: 1000;
   top: 1rem;
   right: 1rem;
   display: flex;
@@ -175,11 +176,13 @@ a img {
   align-items: center;
   border: none;
   background-color: transparent;
-  width: 5rem;
-  height: 3rem;
+  width: 4rem;
+  height: 2rem;
 }
 .nav-button span {
-  width: 100%;
+  min-width: 4rem;
+  height: 0.1rem;
+  display: block;
   border: 0.1rem solid #F2F2F2;
 }
 :root {
@@ -200,6 +203,7 @@ body {
   position: relative;
   z-index: -1;
   width: 100%;
+  height: auto;
 }
 .background-container .background {
   width: 150vh;
