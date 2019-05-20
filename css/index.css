@@ -191,7 +191,7 @@ a img {
   min-height: 100vh;
   top: 0;
   left: 0;
-  background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
+  background: #262122;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -200,9 +200,6 @@ a img {
   z-index: 50;
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
-}
-.mobile-nav a {
-  font-family: inherit;
 }
 :root {
   font-size: 62.5%;

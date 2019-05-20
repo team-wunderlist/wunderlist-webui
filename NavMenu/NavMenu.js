@@ -3,6 +3,8 @@ class NavMenu {
         this.root = root;
         this.button = button;
 
+        this.menuMoving = false;
+
         this.createMenu();
         this.createItems();
 
@@ -34,15 +36,27 @@ class NavMenu {
     }
 
     open() {
-        if (this.nav.classList.contains("open")) {
-            this.animateClose();
-        } else {
-            this.animateOpen();
+        if(!this.menuMoving){
+            if (this.nav.classList.contains("open")) {
+                this.animateClose();
+            } else {
+                this.animateOpen();
+            }
+            this.nav.classList.toggle("open");
         }
-        this.nav.classList.toggle("open");
     }
     animateOpen() {
         this.nav.style.display = "flex";
+        let diagonal = Math.sqrt((window.innerHeight ** 2) +(window.innerWidth ** 2));
+        TweenMax.fromTo(this.nav, 0.5,
+            {
+                webkitClipPath: "circle(0px at 100% 0)",
+                clipPath: "circle(0px at 100% 0)"
+            },
+            {
+                webkitClipPath: `circle(${diagonal}px at 100% 0)`,
+                clipPath: `circle(${diagonal}px at 100% 0)`
+            });
     }
     animateClose() {
         this.nav.style.display = "none";
