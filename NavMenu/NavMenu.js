@@ -93,6 +93,7 @@ class NavButton {
         this.menu = new NavMenu(root, this);
 
         this.button.addEventListener("click", this.buttonClick.bind(this));
+        window.addEventListener("scroll", this.changeColor.bind(this));
     }
 
     createElements() {
@@ -115,18 +116,22 @@ class NavButton {
         this.menu.open();
     }
     changeColor() {
-        let navPosition = this.button.getBoundingClientRect();
+
+        // I tried to check the element underneath for it's color. It kind of worked but not well. Will do manually with the background
+
+/*         let navPosition = this.button.getBoundingClientRect();
         let elementBelow = document.elementFromPoint(navPosition.top + 1, navPosition.left + 1);
-        let color = getComputedStyle(elementBelow).color;
+        console.log(elementBelow);
+        let color = getComputedStyle(elementBelow).backgroundColor;
         if (ColorIslight(color)) {
-            this.button.spans.forEach((span) => {
+            this.spans.forEach((span) => {
                 span.style.borderColor = "#262122";
             })
         } else {
-            this.button.spans.forEach((span) => {
+            this.spans.forEach((span) => {
                 span.style.borderColor = "#F2F2F";
             })
-        }
+        } */
     }
 
     
