@@ -43,5 +43,3 @@ class NavBar {
         this.root.insertBefore(this.header, this.root.firstChild);
     }
 }
-
-new NavBar(document.body);
