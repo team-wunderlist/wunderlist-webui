@@ -126,9 +126,10 @@ a img {
 }
 .nav-bar {
   width: 100%;
-  background-color: #F2522E;
+  background-color: transparent;
   height: 4rem;
   font-size: 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .nav-bar nav {
   width: 100%;
@@ -138,9 +139,10 @@ a img {
 }
 .nav-bar nav h2 {
   color: #F2F2F2;
+  font-weight: 300;
 }
 .nav-bar .register-tab {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   background-color: #262122;
   display: flex;
   justify-content: space-evenly;
@@ -155,6 +157,8 @@ a img {
   border: none;
   background-color: transparent;
   color: #F2F2F2;
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 50%;
 }
 .nav-bar .register-tab span {
   width: 0.1rem;
@@ -166,4 +170,45 @@ html {
   font-size: 62.5%;
   font-size: inherit;
   box-sizing: border-box;
+  font-family: inherit;
+}
+body {
+  background-color: #F2F2F2;
+}
+.top-section {
+  height: 50rem;
+  width: 100%;
+  background: linear-gradient(100deg, #F2522E 0%, #CD2600 100%);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F2F2F2;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+.top-section h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+.top-section h3 {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 1.8rem;
+  width: 27rem;
+}
+.top-section button {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  background: #262122;
+  border: none;
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  color: #F2F2F2;
+  width: 30rem;
+  height: 5rem;
 }
