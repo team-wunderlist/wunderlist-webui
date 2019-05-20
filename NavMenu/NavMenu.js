@@ -118,9 +118,18 @@ class NavButton {
     changeColor() {
         let bg = document.querySelector(".background");
         let bgRect = bg.getBoundingClientRect();
-        console.log("Rect", bgRect);
-        console.log("radius",  parseInt(getComputedStyle(bg).borderRadius));
-        console.log(bgRect.y + bgRect.height - (parseInt(getComputedStyle(bg).borderRadius) * Math.sqrt(2) - parseInt(getComputedStyle(bg).borderRadius)));
+        let bgRadius = parseInt(getComputedStyle(bg).borderRadius);
+        let roundedDistanceFromTop = bgRect.y + bgRect.height - ((bgRadius * Math.sqrt(2)) - bgRadius); // BoundingBox to top - diagonal difference between border and bounding box
+        console.log(roundedDistanceFromTop);
+        if (roundedDistanceFromTop < 0) {
+            this.spans.forEach((span) => {
+                span.style.borderColor = "#262122";
+            })
+        } else {
+            this.spans.forEach((span) => {
+                span.style.borderColor = "#F2F2F2";
+            })
+        }
         // I tried to check the element underneath for it's color. It kind of worked but not well. Will do manually with the background
 
 /*         let navPosition = this.button.getBoundingClientRect();
