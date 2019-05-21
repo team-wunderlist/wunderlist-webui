@@ -95,7 +95,12 @@ class NavButton {
         this.button.addEventListener("click", this.buttonClick.bind(this));
         window.addEventListener("scroll", this.checkColor.bind(this));
 
-        this.currentColor = "#F2F2F2"; // TODO: refactor colors
+        if(document.querySelector(".background")){
+            this.currentColor = "#F2F2F2"; // TODO: refactor colors
+        }else {
+            this.currentColor = "#262122";
+            this.changeButtonColor("#262122");
+        }
     }
 
     createElements() {
@@ -129,6 +134,11 @@ class NavButton {
     }
     checkColor() {
         let bg = document.querySelector(".background");
+        if(!bg){
+            this.currentColor = "#262122";
+            this.changeButtonColor("#262122");
+            return;
+        }
         let bgRect = bg.getBoundingClientRect();
         let bgRadius = parseInt(getComputedStyle(bg).borderRadius);
         let roundedDistanceFromTop = bgRect.y + bgRect.height - ((bgRadius * Math.sqrt(2)) - bgRadius); // BoundingBox to top - diagonal difference between border and bounding box
