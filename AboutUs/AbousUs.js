@@ -3,7 +3,11 @@ class DeveloperProfile {
         this.root = root;
         this.info = info;
 
-        this.elements = createElements();
+        this.elements = this.createElements();
+
+        this.populateElements(this.elements, this.info);
+
+        this.appendElements(this.elements, this.root);
     }
 
     createElements() {
@@ -15,7 +19,7 @@ class DeveloperProfile {
         elements.pictureContainer.classList.add("profile-picture");
 
         elements.profilePicture = document.createElement("img");
-
+        elements.pictureContainer.appendChild(elements.profilePicture);
         elements.description = document.createElement("p");
 
         elements.nameContainer = document.createElement("div");
@@ -28,5 +32,21 @@ class DeveloperProfile {
         elements.nameContainer.appendChild(document.createElement("span"));
 
         return elements;
+    }
+
+    populateElements(elements, info) {
+        elements.name.textContent = info.name;
+
+        elements.profilePicture.src = info.pictureURI;
+
+        elements.description.textContent = info.description;
+    }
+
+    appendElements(elements, root){
+        elements.profile.appendChild(elements.pictureContainer);
+        elements.profile.appendChild(elements.description);
+        elements.profile.appendChild(elements.nameContainer);
+
+        root.appendChild(elements.profile);
     }
 }
