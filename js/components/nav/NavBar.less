@@ -5,10 +5,20 @@ header{
     width:100%;
     height: 50px;
     z-index: 1;
+    .headerImg{
+        img{
+            max-width: 70%;
+            background-color: darkslategray;
+            @media @tablet{
+                max-width: 42%;
+            }
+        }
+    }
     @media @tablet{
         height: 100px;
         .stdBorder(0);
         background-color:@ACY;
+        align-items: center;
     }
 
     nav{

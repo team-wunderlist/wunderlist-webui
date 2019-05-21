@@ -8,8 +8,12 @@ html, body {
 body{
     width:100%;
     @media @tablet{
-        width: 900px;
+        width: @tabWidth;
         margin:auto;
+    }
+    @media @desktop{
+        width: @deskWidth;
+        margin: auto;
     }
 }
 
@@ -24,6 +28,12 @@ h1,h2,h3,h4,h5,h6{
 }
 h1{
     text-align: center;
+    font-size: 1.8rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 img{

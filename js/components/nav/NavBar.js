@@ -23,6 +23,13 @@ export default class NavBar{
         this.menuButton.addEventListener('click',(e)=>{
                 this.toggleMenu()
         })
+
+        this.wunderlist=document.createElement('section')
+        this.wunderlist.classList.add('headerImg')
+        this.navImg=document.createElement('img')
+        this.navImg.setAttribute('src','/img/Wunderlist.png')
+        this.wunderlist.appendChild(this.navImg)
+        this.head.prepend(this.wunderlist)
     }
 
     toggleMenu(){
