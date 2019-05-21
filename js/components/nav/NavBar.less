@@ -10,15 +10,19 @@ header{
             max-width: 70%;
             background-color: darkslategray;
             @media @tablet{
-                max-width: 42%;
+                max-width: 50%;
+                margin:auto;
             }
+        }
+        @media @tablet {
+            .flex();
         }
     }
     @media @tablet{
-        height: 100px;
+        .flex(column,center,nowrap,center);
+        height: auto;
         .stdBorder(0);
         background-color:@ACY;
-        align-items: center;
     }
 
     nav{
@@ -32,6 +36,7 @@ header{
         
         .flex(column,center);
         align-items: center;
+
         .menuButton{
             background-color:@ACY;
             cursor: pointer;
@@ -76,9 +81,9 @@ header{
         }
 
         @media @tablet{
+            position: relative;
             width: 100%;
-            .flex(row,flex-end,nowrap,center);
-            top:35%;
+            .flex(row,center,nowrap,center);
         }
     }
 }

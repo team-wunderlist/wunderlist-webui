@@ -277,3 +277,15 @@ header nav .navContainer .current {
     align-items: flex-start;
   }
 }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  border: 1px white solid;
+  border-radius: 0.25rem;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  color: white;
+}
