@@ -38,7 +38,7 @@ class DeveloperProfile {
 
         elements.profilePicture.style.backgroundImage = `url(${info.pictureURI})`;
 
-        elements.description.textContent = info.description;
+        elements.description.textContent = `"${info.description}"`;
     }
 
     appendElements(elements, root){
@@ -47,23 +47,6 @@ class DeveloperProfile {
         elements.profile.appendChild(elements.nameContainer);
         root.appendChild(elements.profile);
     }
-
-    fixPicture(img, cb) {
-        var imgFile = new Image;
-
-        imgFile.onload = function() {
-/*             if (imgFile.height > imgFile.width) {
-                img.style.height = 'auto';
-                img.style.width = '95%';
-            } else {
-                img.style.height = '95%';
-                img.style.width = 'auto';
-            } */
-            cb();
-        }
-        imgFile.src = img.src;
-
-    }
 }
 
-new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/brandon.jpg"});
+new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/aaron.png"});

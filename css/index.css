@@ -160,11 +160,13 @@ header.page-header h1 {
   margin-top: 2.4rem;
 }
 .developer {
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 .developer .profile-picture {
   width: 50vw;
@@ -189,6 +191,28 @@ header.page-header h1 {
   clip-path: circle(50% at 50% 50%);
   background-position: center;
   background-size: cover;
+}
+.developer p {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #4E4E4E;
+}
+.developer .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  max-width: 20rem;
+}
+.developer .name h2 {
+  font-size: 1.6rem;
+  margin: 0 1rem;
+  font-weight: normal;
+}
+.developer .name span {
+  height: 1px;
+  flex-grow: 1;
+  border: 1px solid #262122;
 }
 .nav-bar {
   width: 100%;
