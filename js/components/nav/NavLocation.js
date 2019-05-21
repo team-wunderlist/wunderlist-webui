@@ -5,10 +5,11 @@ export default class NavLocation{
         this.text=comp.text
 
         this.location=location.slice(0,-5);
+        
         this.element=document.createElement('section')
         this.anchor=document.createElement('a')
         
-        if(this.location==this.destination)
+        if(this.location==this.destination || (this.location=='' && this.destination=='index'))
             this.element.classList.add('current')
         
         this.anchor.textContent=this.text
