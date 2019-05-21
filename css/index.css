@@ -124,6 +124,20 @@ a img {
 :focus {
   outline: 0;
 }
+header.page-header {
+  position: relative;
+  width: 100%;
+}
+header.page-header .header-background {
+  width: 85vw;
+  height: 85vw;
+  position: absolute;
+  left: 0;
+  top: -73vw;
+  background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
+  border-radius: 33%;
+  transform: rotate(12.73deg);
+}
 .nav-bar {
   width: 100%;
   background-color: transparent;
