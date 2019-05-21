@@ -152,6 +152,24 @@ header.page-header h1 {
   text-align: center;
   vertical-align: middle;
 }
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2.4rem;
+}
+.developer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.developer .profile-picture {
+  width: 50%;
+  max-width: 20rem;
+}
 .nav-bar {
   width: 100%;
   background-color: transparent;
