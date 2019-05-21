@@ -28,7 +28,7 @@ class DeveloperProfile {
 
         elements.name = document.createElement("h2");
 
-        elements.nameContainer.appendChild(this.name);
+        elements.nameContainer.appendChild(elements.name);
         elements.nameContainer.appendChild(document.createElement("span"));
 
         return elements;
@@ -47,6 +47,8 @@ class DeveloperProfile {
         elements.profile.appendChild(elements.description);
         elements.profile.appendChild(elements.nameContainer);
 
-        root.appendChild(elements.profile);
+        this.root.appendChild(elements.profile);
     }
 }
+
+new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/aaron.jpeg"});
