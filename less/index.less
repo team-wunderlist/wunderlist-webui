@@ -32,7 +32,7 @@ body {
 .background-container {
     overflow-x: hidden;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     height: auto;
     .background {
@@ -48,7 +48,19 @@ body {
         border-radius: 40vh;
         transform-origin: 0px 0px;
         transform: translateX(60vw) translateY(-50%) rotate(45deg);
+
+        @media @desktopBreakpoint {
+            width: 100%;
+            min-width: 100%;
+            top: 0.5rem;
+            height: 4rem;
+            min-height: 4rem;
+            transform: translateX(0px);
+        }
     
+    }
+    @media @desktopBreakpoint {
+        height: 8rem;
     }
 }
 .home-container {
@@ -110,6 +122,11 @@ body {
         color: @colorWhite;
         width: 80%;
         height: 6rem;
+    }
+
+    @media @desktopBreakpoint {
+        position: relative;
+        background: none;
     }
 
 
