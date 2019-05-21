@@ -5,10 +5,230 @@
 html {
     margin: 0px;
     padding: 0px;
+
+    p {
+        line-height: 25px;
+    }
 }
 
 body {
     padding: 0px;
-    margin: 0px;
+    margin: auto;
     font-family: 'PT Sans', sans-serif;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    header {
+        padding: 20px;
+        .flex(space-between);
+        .maxWidthAndCenter();
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        img {
+            cursor: pointer;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        @media @tablet {
+            img {
+                display: none;
+            }
+
+            nav {
+                width: 400px;
+                .flex(space-around, center)
+            }
+        }
+    }
+
+    .menu {
+        background-color: #f2f2f2;
+        border: 1px solid #C0C0C0;
+        .flex(center, center, space-around);
+        height: 300px;
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px;
+            font-size: 2rem;
+            text-decoration: none;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .sign-up {
+        padding: 0px 20px;
+        .flex(center, center, column);
+        text-align: center;
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0px;
+        }
+
+        p {
+            margin: 0px 0px 35px 0px;
+            font-size: 1.1rem;
+        }
+        
+        .sign-up-content {
+            input {
+                .emailInput();
+            }
+    
+            .sign-up-btn {
+                .signUpButton();
+            }
+
+            @media @tablet {
+                .flex();
+
+                input {
+                    margin: 0px 10px;
+                }
+
+                .sign-up-btn {
+                    margin: 0px 10px;
+                }
+            }
+        }
+    }
+
+    .testimony-img {
+        height: 300px;
+        width: 100%;
+        background-color: #f2f2f2;
+        .flex(center, center);
+    }
+
+    .testimonies {
+        .flex(none, center, column);
+        padding: 30px 30px 0px 30px;
+        .maxWidthAndCenter();
+
+        .testimony-text {
+            padding: 0px 75px;
+            text-align: center;
+
+            .testimony-giver {
+                color: grey;
+                margin: 0px;
+                padding: 0px 0px 30px 0px;
+            }
+        }
+
+        @media @smallTablet {
+            .flex(space-around);
+            flex-wrap: wrap;
+
+            .testimony {
+                width: 45%;
+            }
+
+            .testimony-text {
+                padding: 0px 30px;
+                text-align: center;
+            }
+        }
+
+        @media @tablet {
+            .flex(space-around);
+
+            .testimony {
+                width: 30%;
+            }
+
+            .testimony-text {
+                padding: 0px 30px;
+                text-align: center;
+            }
+        }
+    }
+
+    .join-others {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 50px 20px;
+
+        h2 {
+            font-size: 2rem;
+            margin: 0px;
+            margin-bottom: 20px;
+
+            .colored-h2 {
+                color: #F2522E;
+            }
+        }
+
+        .sign-up-content {
+
+            input {
+                .emailInput();
+            }
+    
+            .sign-up-btn {
+                .signUpButton();
+            }
+
+            @media @tablet {
+                .flex(center);
+
+                input {
+                    margin: 0px 10px;
+                }
+
+                .sign-up-btn {
+                    margin: 0px 10px;
+                }
+            }
+        }
+
+        @media @smallTablet {
+            padding: 50px 125px;
+        }
+
+        @media @tablet {
+            padding: 50px 200px;
+        }
+    }
+
+    .features {
+        padding: 30px 30px 60px 30px;
+        .maxWidthAndCenter();
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    footer {
+        .flex(center, center, column);
+        padding: 30px;
+        
+        h3 {
+            margin: 0px 0px 20px 0px;
+        }
+    }
 }
