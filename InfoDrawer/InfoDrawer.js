@@ -1,3 +1,4 @@
+let infoDrawerExpandDur = 0.3;
 class InfoDrawer {
     constructor(root, content) {
         this.root = root;
@@ -32,7 +33,7 @@ class InfoDrawer {
 
     populateElements(elements, content) {
         elements.title.textContent = content.title;
-        elements.description = content.description;
+        elements.description.textContent = content.description;
         elements.expandButton.textContent = "+";
     }
 
@@ -41,23 +42,35 @@ class InfoDrawer {
     }
 
     expandDrawer() {
+        let description = this.elements.description;
         if (this.elements.container.classList.contains("open")){
-            TweenMax.to(this.elements.container,0.3, {
+            description.style.display = "none";
+            TweenMax.to(this.elements.container,infoDrawerExpandDur / 2, {
                 borderRadius: "50%",
                 width: "80vw"
             })
-            TweenMax.to(this.elements.title,0.3, {
+            TweenMax.to(this.elements.title,infoDrawerExpandDur / 2, {
                 top: "50%",
             })
 
         } else {
-            TweenMax.to(this.elements.title,0.3, {
+            TweenMax.to(this.elements.title,infoDrawerExpandDur, {
                 top: "5%",
             })
-            TweenMax.to(this.elements.container,0.3, {
+            TweenMax.to(this.elements.container,infoDrawerExpandDur, {
                 borderRadius: "0%",
                 width: "100vw"
             })
+            setTimeout( () => {
+                description.style.display = "block";
+                TweenMax.fromTo(description, infoDrawerExpandDur * .8, 
+                {
+                    opacity: 0
+                },
+                {
+                    opacity: 1
+                })
+            }, infoDrawerExpandDur * 1000);
         }
         this.elements.container.classList.toggle("open");
     }
