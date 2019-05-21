@@ -18,6 +18,17 @@ class NavMenu {
         this.nav = document.createElement("nav");
         this.nav.classList.add("mobile-nav");
         this.nav.style.display = "none";
+
+        this.tapLayer = document.createElement("div");
+        this.tapLayer.setAttribute("style", `
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: lightgrey;
+            opacity:0;
+        `);
     }
 
     createItems(links) {
@@ -28,10 +39,12 @@ class NavMenu {
             a.href = link.href;
             a.target = link.target;
             this.items.push(a);
+            a.addEventListener("click", this.itemClick.bind(this));
         });
     }
 
     appendMenu() {
+        this.nav.appendChild(this.tapLayer);
         this.items.forEach((item) => this.nav.appendChild(item));
         this.root.appendChild(this.nav);
     }
@@ -45,6 +58,19 @@ class NavMenu {
             }
             this.nav.classList.toggle("open");
         }
+    }
+    itemClick(e) {
+        TweenMax.fromTo(this.tapLayer, NavMenuAnimationDur * 2,
+            {
+                webkitClipPath: `circle(0px at ${e.clientX}px ${e.clientY}px)`,
+                clipPath: `circle(0px at ${e.clientX}px ${e.clientY}px)`,
+                opacity: 0.5
+            },
+            {
+                webkitClipPath: `circle(200px at ${e.clientX}px ${e.clientY}px)`,
+                clipPath: `circle(200px at ${e.clientX}px ${e.clientY}px)`,
+                opacity: 0
+            });
     }
     animateOpen() {
         this.menuMoving = true;
@@ -79,6 +105,9 @@ class NavMenu {
             this.nav.style.display = "none";
             this.menuMoving = false;
         }, NavMenuAnimationDur * 1000);
+    }
+    animateClick() {
+
     }
 }
 
