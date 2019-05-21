@@ -312,6 +312,12 @@ body {
   max-width: 100vw;
   min-height: 8000px;
 }
+#homepage-body {
+  background-image: url("../assets/background.svg");
+  background-size: 400px 816px;
+  background-repeat: repeat;
+  background-position: -5% 0;
+}
 .background-container {
   overflow-x: hidden;
   position: relative;
@@ -331,6 +337,14 @@ body {
   transform-origin: 0px 0px;
   transform: translateX(60vw) translateY(-50%) rotate(45deg);
 }
+.home-container {
+  background-image: url("../assets/background.svg");
+  background-size: 400px 816px;
+  background-repeat: repeat;
+  background-position: -5% 0;
+  width: auto;
+  height: auto;
+}
 .top-section {
   height: 100vh;
   width: 100%;
@@ -347,6 +361,10 @@ body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   text-align: center;
+  background-image: url("../assets/background.svg");
+  background-size: 400px 816px;
+  background-repeat: repeat;
+  background-position: -5% 0;
 }
 .top-section .top-section-container {
   width: 100%;
@@ -378,6 +396,12 @@ body {
   color: #F2F2F2;
   width: 80%;
   height: 6rem;
+}
+section.app-info {
+  min-height: 4000px;
+  min-width: 100%;
+  content: "";
+  position: relative;
 }
 hidden {
   display: none;
