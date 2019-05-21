@@ -127,6 +127,12 @@ a img {
 header.page-header {
   position: relative;
   width: 100%;
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 header.page-header .header-background {
   width: 85vw;
@@ -134,9 +140,17 @@ header.page-header .header-background {
   position: absolute;
   left: 0;
   top: -73vw;
+  z-index: -1;
   background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   border-radius: 33%;
   transform: rotate(12.73deg);
+}
+header.page-header h1 {
+  color: #F2F2F2;
+  font-size: 2.4rem;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
 }
 .nav-bar {
   width: 100%;
