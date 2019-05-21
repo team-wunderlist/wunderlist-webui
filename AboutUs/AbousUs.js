@@ -46,9 +46,8 @@ class DeveloperProfile {
         elements.profile.appendChild(elements.pictureContainer);
         elements.profile.appendChild(elements.description);
         elements.profile.appendChild(elements.nameContainer);
-
-        this.root.appendChild(elements.profile);
+        root.appendChild(elements.profile);
     }
 }
 
-new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/aaron.jpeg"});
+new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/aaron.png"});
