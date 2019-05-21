@@ -52,6 +52,11 @@ class DeveloperProfile {
 // Developers
 const DeveloperArray = [
     {
+        name: "Leonel Flores",
+        description: "I'm 26 years old and an aspiring developer/programmer going to Lamnda school to jump into the career I've always wanted.",
+        pictureURI: "AboutUs/profilesImages/leonel.jpg"
+    },
+    {
         name: "Aaron Thompson", 
         description: "I am a 20 year old developer who has been developing software at home for 6 years. I have joined Lambda to make my dreams a reality and to further my passion.", 
         pictureURI: "AboutUs/profilesImages/aaron.png"
@@ -60,11 +65,6 @@ const DeveloperArray = [
         name: "Mario Amaya",
         description: "I am 34 years old, and I have a background in Media Production and Video Editing.  I am currently at Lambda School looking to expand my skill set and peruse a new career.",
         pictureURI: "AboutUs/profilesImages/mario.jpg"
-    },
-    {
-        name: "Leonel Flores",
-        description: "I'm 26 years old and an aspiring developer/programmer going to Lamnda school to jump into the career ive always wanted.",
-        pictureURI: "AboutUs/profilesImages/leonel.jpg"
     },
     {
         name: "Brandon Porter",
