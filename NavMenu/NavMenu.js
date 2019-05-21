@@ -1,14 +1,15 @@
 const NavMenuAnimationDur = .3;
 
 class NavMenu {
-    constructor(root, button) {
+    constructor(root, button, links) {
         this.root = root;
         this.button = button;
+        this.links = links;
 
         this.menuMoving = false;
 
         this.createMenu();
-        this.createItems();
+        this.createItems(this.links);
 
         this.appendMenu();
     }
@@ -19,17 +20,15 @@ class NavMenu {
         this.nav.style.display = "none";
     }
 
-    createItems() {
+    createItems(links) {
         this.items = [];
-        this.items[0] = document.createElement("a");
-        this.items[1] = document.createElement("a");
-        this.items[2] = document.createElement("a");
-        this.items[3] = document.createElement("a");
-
-        this.items[0].textContent = "Home";
-        this.items[1].textContent = "Login";
-        this.items[2].textContent = "Sign Up";
-        this.items[3].textContent = "About Us";
+        links.forEach(link => {
+            let a = document.createElement("a");
+            a.textContent = link.value;
+            a.href = link.href;
+            a.target = link.target;
+            this.items.push(a);
+        });
     }
 
     appendMenu() {
@@ -90,7 +89,7 @@ class NavButton {
         this.createElements();
         this.appendToRoot();
 
-        this.menu = new NavMenu(root, this);
+        this.menu;
 
         this.button.addEventListener("click", this.buttonClick.bind(this));
         window.addEventListener("scroll", this.checkColor.bind(this));
@@ -103,6 +102,10 @@ class NavButton {
         }
     }
 
+    createMenu(links) {
+        this.menu = new NavMenu(this.root, this, links);
+        return this.menu;
+    }
     createElements() {
         this.button = document.createElement("button");
         this.button.classList.add("nav-button");
@@ -217,4 +220,30 @@ function ColorIslight(color) {
         return false;
     }
 }
-new NavButton(document.body);
+
+let navMenuLinksArray = [
+    {
+        value: "Home",
+        href: "index.html",
+        target: ""
+    },
+    {
+        value: "Login",
+        href: "#",
+        target: ""
+    },
+    {
+        value: "Sign Up",
+        href: "#",
+        target: ""
+    },
+    {
+        value: "About us",
+        href: "aboutus.html",
+        target: ""
+    },
+
+]
+
+let mobileNavButton = new NavButton(document.body);
+mobileNavButton.createMenu(navMenuLinksArray);
