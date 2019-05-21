@@ -232,7 +232,7 @@ body {
   background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   border-radius: 40vh;
   transform-origin: 0px 0px;
-  transform: translateX(60vw) rotate(45deg);
+  transform: translateX(60vw) translateY(-50%) rotate(45deg);
 }
 .top-section {
   height: 100vh;
