@@ -1,1 +1,1 @@
-# Splash Page for WunderList 2.0
+# Brandon's Splash Page for WunderList 2.0
