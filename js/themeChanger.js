@@ -1,3 +1,5 @@
+import Themes from './dbs/ThemeData.js'
+
 export default class Themer{
     constructor(stylesheet, root=null){
         this.element=stylesheet
@@ -11,13 +13,24 @@ export default class Themer{
         this.element.setAttribute('href',`/css/${this.stored.theme}.css`)
         console.log(this.stored.theme);
         if(this.root){
-            this.available=this.root.querySelectorAll('input')
-            this.available.forEach(item=>{
-                if (item.name==this.stored.theme) {
-                    item.checked=true
-                    this.current=item
+            this.themes=Themes;
+            this.themes.forEach(theme=>{
+                let themeTag=document.createElement('label'),
+                    themeInput=document.createElement('input')
+
+                themeInput.setAttribute('type','radio')
+                themeInput.setAttribute('name',theme.name)
+
+                if (themeInput.name==this.stored.theme) {
+                    themeInput.checked=true
+                    this.current=themeInput
                 }
+
+                themeTag.textContent=`: ${theme.title}`
+                themeTag.prepend(themeInput)
+                this.root.appendChild(themeTag)
             })
+
             this.root.addEventListener('change',(e)=>{
                     this.attach(e)
             })
