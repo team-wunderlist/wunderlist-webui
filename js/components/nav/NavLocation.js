@@ -13,7 +13,12 @@ export default class NavLocation{
         
         this.anchor.textContent=this.text
         
-            this.anchor.setAttribute('href',`/${this.destination.join('/')}.html`)
+        if(this.destination.includes('https:/'))
+            this.destination=this.destination.join('/')
+        else
+            this.destination=`/${this.destination.join('/')}.html`
+
+        this.anchor.setAttribute('href',this.destination)
         this.element.appendChild(this.anchor)
 
     }
