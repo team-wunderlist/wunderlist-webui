@@ -21,12 +21,23 @@ body {
         color: black;
     }
 
+    h1 {
+        font-size: 2.8rem;
+        padding: 0px 30px;
+        margin: 10px 0px;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
     header {
         padding: 20px;
         .flex(space-between);
         .maxWidthAndCenter();
 
-        h1 {
+        h2 {
             font-size: 2rem;
             margin: 0;
         }
@@ -56,7 +67,8 @@ body {
 
     .menu {
         background-color: #f2f2f2;
-        border: 1px solid #C0C0C0;
+        border-top: 1px solid #C0C0C0;
+        border-bottom: 1px solid #C0C0C0;
         .flex(center, center, space-around);
         height: 300px;
         position: absolute;
@@ -82,11 +94,6 @@ body {
         padding: 0px 20px;
         .flex(center, center, column);
         text-align: center;
-
-        h1 {
-            font-size: 2.8rem;
-            margin: 10px 0px;
-        }
 
         p {
             margin: 0px 0px 35px 0px;
@@ -163,6 +170,92 @@ body {
             .testimony-text {
                 padding: 0px 30px;
                 text-align: center;
+            }
+        }
+    }
+
+    .about-content {
+        .flex(none, center, column);
+
+        .gray-bg {
+            background-color: #f2f2f2;
+            width: 100%;
+        }
+
+        .role{
+            max-width: 1400px;
+            margin: auto;
+            padding-top: 30px;
+            .flex(@dir: column);
+
+            h1 {
+                text-align: center;
+            }
+
+            @media @smallMonitor {
+                .flex(center, center, row);
+                flex-wrap: wrap;
+
+                h1 {
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .user-interface {
+            .about-person {
+                @media @smallMonitor {
+                    width: 33%;
+                }
+            }
+        }
+
+        .front-end {
+            .about-person {
+                @media @smallMonitor {
+                    width: 45%;
+                }
+            }
+        }
+
+        .back-end {
+
+            @media @smallMonitor {
+                .about-person {
+                    .flex();
+                    width: 75%;
+                    margin-bottom: 50px;
+    
+                    .person-text {
+                            width: 60%;
+                            padding: 0px 50px;
+                            .flex(center, center, column);
+                    }
+                }
+            }
+        }
+
+        .about-person {
+            text-align: center;
+            margin-bottom: 20px;
+            
+            .person-img {
+                height: 350px;
+                width: 350px;
+                border-radius: 50%;
+            }
+
+            .person-text {
+                padding: 0px 20px;
+
+                @media @smallTablet {
+                    padding: 0px 100px;
+                }
+
+                @media @smallMonitor {
+                    padding: 0px 20px;
+                }
             }
         }
     }
