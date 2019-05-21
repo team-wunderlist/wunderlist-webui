@@ -183,8 +183,6 @@ header.page-header h1 {
   right: 0;
   margin: auto;
   vertical-align: middle;
-  width: 95%;
-  height: 95%;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
 }

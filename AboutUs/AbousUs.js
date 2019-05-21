@@ -6,8 +6,9 @@ class DeveloperProfile {
         this.elements = this.createElements();
 
         this.populateElements(this.elements, this.info);
-
-        this.appendElements(this.elements, this.root);
+        this.fixPicture(this.elements.profilePicture, () => {
+            this.appendElements(this.elements, this.root);
+        });
     }
 
     createElements() {
@@ -48,6 +49,23 @@ class DeveloperProfile {
         elements.profile.appendChild(elements.nameContainer);
         root.appendChild(elements.profile);
     }
+
+    fixPicture(img, cb) {
+        var imgFile = new Image;
+
+        imgFile.onload = function() {
+            if (imgFile.height > imgFile.width) {
+                img.style.height = 'auto';
+                img.style.width = '95%';
+            } else {
+                img.style.height = '95%';
+                img.style.width = 'auto';
+            }
+            cb();
+        }
+        imgFile.src = img.src;
+
+    }
 }
 
-new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/aaron.png"});
+new DeveloperProfile(document.querySelector(".developer-info"), {name: "Aaron Thompson", description: "test", pictureURI: "AboutUs/profilesImages/brandon.jpg"});
