@@ -175,7 +175,7 @@ header.page-header h1 {
   background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   position: relative;
 }
-.developer .profile-picture img {
+.developer .profile-picture div {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -183,8 +183,12 @@ header.page-header h1 {
   right: 0;
   margin: auto;
   vertical-align: middle;
+  width: 95%;
+  height: 95%;
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
+  background-position: center;
+  background-size: cover;
 }
 .nav-bar {
   width: 100%;

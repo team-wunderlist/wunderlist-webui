@@ -6,9 +6,7 @@ class DeveloperProfile {
         this.elements = this.createElements();
 
         this.populateElements(this.elements, this.info);
-        this.fixPicture(this.elements.profilePicture, () => {
-            this.appendElements(this.elements, this.root);
-        });
+        this.appendElements(this.elements, this.root);
     }
 
     createElements() {
@@ -19,7 +17,7 @@ class DeveloperProfile {
         elements.pictureContainer = document.createElement("div");
         elements.pictureContainer.classList.add("profile-picture");
 
-        elements.profilePicture = document.createElement("img");
+        elements.profilePicture = document.createElement("div");
         elements.pictureContainer.appendChild(elements.profilePicture);
         elements.description = document.createElement("p");
 
@@ -38,7 +36,7 @@ class DeveloperProfile {
     populateElements(elements, info) {
         elements.name.textContent = info.name;
 
-        elements.profilePicture.src = info.pictureURI;
+        elements.profilePicture.style.backgroundImage = `url(${info.pictureURI})`;
 
         elements.description.textContent = info.description;
     }
@@ -54,13 +52,13 @@ class DeveloperProfile {
         var imgFile = new Image;
 
         imgFile.onload = function() {
-            if (imgFile.height > imgFile.width) {
+/*             if (imgFile.height > imgFile.width) {
                 img.style.height = 'auto';
                 img.style.width = '95%';
             } else {
                 img.style.height = '95%';
                 img.style.width = 'auto';
-            }
+            } */
             cb();
         }
         imgFile.src = img.src;
