@@ -3,7 +3,8 @@ class Card {
         this.container = container;
         this.data = data;
         this.elements = this.createElements();
-
+        
+        this.populateElements(this.elements, data);
         this.appendElements(container, this.elements);
     }
 
