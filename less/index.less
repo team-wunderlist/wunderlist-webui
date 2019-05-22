@@ -49,12 +49,12 @@ body {
         left: 0;
     
         background: @backgroundGradient;
-        border-radius: 40vw;
+        border-radius: 40vh;
         transform-origin: 0px 0px;
-        transform: translateX(60vw) translateY(calc(-100vh / 10vw)) rotate(45deg);
+        transform: translateX(60vw) translateY(-50%) rotate(45deg);
 
         @media @tabletBreakpoint {
-            display:none;
+            display: none;
         }
     
     }
@@ -131,9 +131,10 @@ body {
     @media @tabletBreakpoint {
         position: relative;
         background: none;
+        margin-bottom: 8rem;
     }
-    @media @desktopBreakpoint {
 
+    @media @desktopBreakpoint {
         padding-bottom: 500px;
 
         

@@ -154,12 +154,14 @@ class NavButton {
         this.button.addEventListener("click", this.buttonClick.bind(this));
         window.addEventListener("scroll", this.checkColor.bind(this));
 
-        if(document.querySelector(".background")){
+/*         if(document.querySelector(".background")){
             this.currentColor = "#F2F2F2"; // TODO: refactor colors
         }else {
             this.currentColor = "#262122";
             this.changeButtonColor("#262122");
-        }
+        } */
+
+        this.checkColor();
     }
 
     createMenu(links) {
@@ -196,6 +198,16 @@ class NavButton {
         })
     }
     checkColor() {
+        if (window.wunderlistUtils.GetCurrentBreakpoint() === "tablet"){
+            if(window.scrollY >= window.innerHeight){
+                this.currentColor = "#262122"; // TODO: refactor colors
+                this.changeButtonColor(this.currentColor);
+            } else {
+                this.currentColor = "#F2F2F2"; // TODO: refactor colors
+                this.changeButtonColor(this.currentColor);
+            }
+            return;
+        }
         let bg = document.querySelector(".background");
         if(!bg){
             this.currentColor = "#262122";

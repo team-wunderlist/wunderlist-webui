@@ -290,6 +290,7 @@ header.page-header h1 {
   height: 80%;
 }
 .features {
+  margin-top: 3rem;
   height: auto;
 }
 .features .feature-info {
@@ -466,10 +467,8 @@ header.page-header h1 {
   bottom: 0;
   transform: translate(-50%);
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .info-drawer {
-    min-width: 100%;
-    width: 100%;
     min-height: 20rem;
     border-radius: 0;
   }
@@ -483,6 +482,12 @@ header.page-header h1 {
     position: relative;
     left: initial;
     transform: initial;
+  }
+}
+@media (min-width: 1000px) {
+  .info-drawer {
+    min-width: 100%;
+    width: 100%;
   }
 }
 .device-showcase {
@@ -602,9 +607,9 @@ body {
   top: 0;
   left: 0;
   background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
-  border-radius: 40vw;
+  border-radius: 40vh;
   transform-origin: 0px 0px;
-  transform: translateX(60vw) translateY(calc(-100vh / 10vw)) rotate(45deg);
+  transform: translateX(60vw) translateY(-50%) rotate(45deg);
 }
 @media (min-width: 768px) {
   .background-container .background {
@@ -686,6 +691,7 @@ body {
   .top-section {
     position: relative;
     background: none;
+    margin-bottom: 8rem;
   }
 }
 @media (min-width: 1000px) {
