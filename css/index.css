@@ -602,18 +602,13 @@ body {
   top: 0;
   left: 0;
   background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
-  border-radius: 40vh;
+  border-radius: 40vw;
   transform-origin: 0px 0px;
-  transform: translateX(60vw) translateY(-50%) rotate(45deg);
+  transform: translateX(60vw) translateY(calc(-100vh / 10vw)) rotate(45deg);
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .background-container .background {
-    width: 100%;
-    min-width: 100%;
-    top: 0.5rem;
-    height: 4rem;
-    min-height: 4rem;
-    transform: translateX(0px);
+    display: none;
   }
 }
 @media (min-width: 1000px) {
@@ -687,10 +682,14 @@ body {
     border-radius: 2rem;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .top-section {
     position: relative;
     background: none;
+  }
+}
+@media (min-width: 1000px) {
+  .top-section {
     padding-bottom: 500px;
   }
   .top-section .top-section-container {
@@ -700,7 +699,7 @@ body {
 .desktop-background {
   display: none;
 }
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .desktop-background {
     display: initial;
     position: absolute;

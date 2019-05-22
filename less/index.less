@@ -49,17 +49,12 @@ body {
         left: 0;
     
         background: @backgroundGradient;
-        border-radius: 40vh;
+        border-radius: 40vw;
         transform-origin: 0px 0px;
-        transform: translateX(60vw) translateY(-50%) rotate(45deg);
+        transform: translateX(60vw) translateY(calc(-100vh / 10vw)) rotate(45deg);
 
-        @media @desktopBreakpoint {
-            width: 100%;
-            min-width: 100%;
-            top: 0.5rem;
-            height: 4rem;
-            min-height: 4rem;
-            transform: translateX(0px);
+        @media @tabletBreakpoint {
+            display:none;
         }
     
     }
@@ -133,9 +128,12 @@ body {
         }
     }
 
-    @media @desktopBreakpoint {
+    @media @tabletBreakpoint {
         position: relative;
         background: none;
+    }
+    @media @desktopBreakpoint {
+
         padding-bottom: 500px;
 
         
@@ -149,7 +147,7 @@ body {
 
 .desktop-background {
     display: none;
-    @media @desktopBreakpoint {
+    @media @tabletBreakpoint {
         display: initial;
         position: absolute;
         min-width: 100%;
