@@ -562,6 +562,7 @@ body {
   .top-section {
     position: relative;
     background: none;
+    padding-bottom: 400px;
   }
 }
 .desktop-background {
@@ -582,6 +583,11 @@ section.app-info {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+@media (min-width: 1000px) {
+  section.app-info {
+    padding-top: 300px;
+  }
 }
 hidden {
   display: none;
