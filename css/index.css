@@ -201,6 +201,7 @@ header.page-header h1 {
 }
 .developer .name {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 50vw;
@@ -282,14 +283,14 @@ header.page-header h1 {
     display: none;
   }
 }
-.mobile-nav {
+.navigation {
+  display: none;
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
   top: 0;
   left: 0;
   background: #262122;
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -298,10 +299,22 @@ header.page-header h1 {
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
 }
-.mobile-nav a {
+.navigation a {
   color: inherit;
   text-decoration: none;
   z-index: 100;
+}
+@media (min-width: 1000px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 100%;
+    min-height: 5rem;
+    background-color: transparent;
+    font-size: 1.8rem;
+  }
 }
 .info-drawer {
   display: flex;
@@ -309,7 +322,7 @@ header.page-header h1 {
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  background-color: #F23E2E;
+  background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   min-width: 80vw;
   width: 80vw;
   min-height: 80vw;
@@ -364,14 +377,17 @@ header.page-header h1 {
 @media (min-width: 1000px) {
   .device-showcase {
     position: absolute;
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: initial;
-    width: 1200px;
+    width: 1000px;
+    height: 650px;
     top: 100vh;
     transform: translateY(-50%);
     z-index: 2;
   }
   .device-showcase .desktop-device {
-    width: 80%;
+    width: 900px;
     background-color: #262122;
     height: 600px;
     padding: 0 2%;
@@ -402,7 +418,7 @@ header.page-header h1 {
     background-color: #F2F2F2;
     border-radius: 2rem;
     box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
-    transform: translateX(-100%) translateY(10%);
+    transform: translateY(-10%);
   }
   .device-showcase .phone-device .screen {
     width: 100%;

@@ -3,14 +3,17 @@
 
     @media @desktopBreakpoint {
         position: absolute;
+        overflow-x: hidden;
+        overflow-y: hidden;
         display: initial;
-        width: 1200px;
+        width: 1000px;
+        height: 650px;
         top: 100vh;
         transform: translateY(-50%);
         z-index: 2;
 
         .desktop-device {
-            width: 80%;
+            width: 900px;
             background-color: @colorBlack;
             height: 600px;
             padding: 0 2%;
@@ -45,7 +48,7 @@
             border-radius: 2rem;
             box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
 
-            transform: translateX(-100%) translateY(10%);
+            transform: translateY(-10%);
 
             .screen {
                 width: 100%;

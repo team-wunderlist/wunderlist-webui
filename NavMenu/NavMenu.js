@@ -16,8 +16,7 @@ class NavMenu {
 
     createMenu() {
         this.nav = document.createElement("nav");
-        this.nav.classList.add("mobile-nav");
-        this.nav.style.display = "none";
+        this.nav.classList.add("navigation");
 
         this.tapLayer = document.createElement("div");
         this.tapLayer.setAttribute("style", `
