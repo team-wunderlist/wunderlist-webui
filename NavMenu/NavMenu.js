@@ -22,14 +22,15 @@ class NavMenu {
 
         this.tapLayer = document.createElement("div");
         this.tapLayer.setAttribute("style", `
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
+            width: 100%;
+            height: 100%;
+            position: absolute;
             top: 0;
             left: 0;
             background-color: lightgrey;
             opacity:0;
         `);
+        this.tapLayer.classList.add("tap-layer");
 
         this.background = document.createElement("div");
         this.background.classList.add("nav-background");
@@ -80,7 +81,6 @@ class NavMenu {
     }
     animateOpen() {
         this.menuMoving = true;
-        this.nav.style.display = "flex";
         let diagonal = Math.sqrt((window.innerHeight ** 2) +(window.innerWidth ** 2));
         TweenMax.fromTo(this.nav, NavMenuAnimationDur,
             {
@@ -108,7 +108,6 @@ class NavMenu {
                 clipPath: "circle(0px at 100% 0)"
             });
         setTimeout(() => {
-            this.nav.style.display = "none";
             this.menuMoving = false;
         }, NavMenuAnimationDur * 1000);
     }

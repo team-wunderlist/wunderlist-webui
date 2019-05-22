@@ -42,6 +42,8 @@ class InfoDrawer {
     }
 
     expandDrawer() {
+        if(window.wunderlistUtils.GetCurrentBreakpoint() !== "mobile")
+            return;
         let description = this.elements.description;
         if (this.elements.container.classList.contains("open")){
             description.style.display = "none";
@@ -77,14 +79,14 @@ class InfoDrawer {
 }
 let appInfoContainer = document.querySelector(".app-info");
 new InfoDrawer(appInfoContainer, {
-    title: "Manage your time",
-    description: "Wunderlist allows you to manage your time effectivly and schedual your day in the way you want"
+    title: "Product info 1",
+    description: "Infomation about product"
 })
 new InfoDrawer(appInfoContainer, {
-    title: "Manage your time",
-    description: "Wunderlist allows you to manage your time effectivly and schedual your day in the way you want"
+    title: "Product info 2",
+    description: "Infomation about product"
 })
 new InfoDrawer(appInfoContainer, {
-    title: "Manage your time",
-    description: "Wunderlist allows you to manage your time effectivly and schedual your day in the way you want"
+    title: "Product info 3",
+    description: "Infomation about product"
 })

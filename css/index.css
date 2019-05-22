@@ -284,13 +284,13 @@ header.page-header h1 {
   }
 }
 .navigation {
-  display: none;
+  display: flex;
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
   top: 0;
   left: 0;
-  background: #262122;
+  background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -298,6 +298,7 @@ header.page-header h1 {
   z-index: 50;
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
+  clip-path: circle(0px at 100% 0);
 }
 .navigation a {
   color: inherit;
@@ -305,16 +306,23 @@ header.page-header h1 {
   z-index: 100;
 }
 .navigation .nav-background {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
-  opacity: 0;
+  display: none;
+}
+@media (min-width: 1000px) {
+  .navigation .nav-background {
+    display: initial;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
+    opacity: 0;
+  }
 }
 @media (min-width: 1000px) {
   .navigation {
+    clip-path: initial;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
