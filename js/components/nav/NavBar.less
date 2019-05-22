@@ -5,6 +5,7 @@ header{
     width:100%;
     height: 50px;
     z-index: 1;
+    background-color:@bgcolor;
     .headerImg{
         img{
             max-width: 70%;
@@ -21,8 +22,6 @@ header{
     @media @tablet{
         .flex(column,center,nowrap,center);
         height: auto;
-        .stdBorder(0);
-        background-color:@ACY;
     }
 
     nav{
@@ -38,12 +37,12 @@ header{
         align-items: center;
 
         .menuButton{
-            background-color:@ACY;
             cursor: pointer;
             margin:auto;
             padding:12.5px;
             .stdBorder();
             width:110px;
+            background-color: @ACY;
             @media @tablet {
                 display: none;
             }
@@ -76,7 +75,7 @@ header{
             }
 
             .current{
-                background-color: darken(@ACY,35%);
+                background-color: darken(@ACY,15%);
             }
         }
 

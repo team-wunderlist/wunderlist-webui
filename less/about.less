@@ -1,0 +1,38 @@
+#about{
+    .card-container{
+        .stdBorder(0);
+    }
+    .card-container:nth-child(odd){
+        border-radius: 0 .25rem .25rem 0;
+        border-left: none;
+    }
+
+    .card-container:nth-child(even){
+        border-radius: .25rem 0 0 .25rem;
+        border-right: none;
+    }
+
+    .card-data{
+        box-shadow:none;
+    }
+
+    @media @desktop{
+        width:100%;
+        .card-container:nth-child(odd){
+            margin-left:0;
+            box-shadow:5px 5px 10px darkgray;
+            border-radius: 0 25% 25% 0;
+        }
+        .card-container:nth-child(even){
+            margin-right:0;
+            box-shadow:-5px 5px 10px darkgray;
+            border-radius: 25% 0 0 24%;
+        }
+        .card-container img{
+            border-radius: 50%;
+        }
+        .card-container h3{
+            border-bottom:none;
+        }
+    }
+}
