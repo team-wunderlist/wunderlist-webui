@@ -22,3 +22,28 @@
     element.style.transform = `translateY(-${distanceToMoveY}px) ` + tr;
 }
 calculateDistanceToMoveBackground(document.querySelector(".background")); */
+window.wunderlistUtils = {};
+window.wunderlistUtils.breakpoints = [
+    {
+        width: 1000,
+        name: "desktop"
+    },
+    {
+        width: 768,
+        name: "tablet"
+    },
+    {
+        width: 0,
+        name: "mobile"
+    }
+]
+window.wunderlistUtils.GetCurrentBreakpoint = function GetCurrentBreakpoint(){
+    let screenWidth = window.innerWidth;
+    let bp;
+    window.wunderlistUtils.breakpoints.forEach(breakpoint => {
+        if(screenWidth >= breakpoint.width) {
+            bp = breakpoint.name;
+        }
+    });
+    return bp;
+}

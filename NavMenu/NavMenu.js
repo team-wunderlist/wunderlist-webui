@@ -1,3 +1,4 @@
+const desktopBreakpoint = 1000
 const NavMenuAnimationDur = .3;
 
 class NavMenu {
