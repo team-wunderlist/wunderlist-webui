@@ -1,14 +1,10 @@
 class DeviceShowcase {
-    constructor(root) {
-        this.root = root;
-
+    constructor() {
         this.elements = this.createDevices();
-
-        appendElements(root, this.elements);
     }
 
     createDevices() {
-        elements = [];
+        let elements = [];
         elements.container = document.createElement("div");
         elements.container.classList.add("device-showcase");
 
@@ -19,10 +15,6 @@ class DeviceShowcase {
         elements.smartphone = this.smartphone.elements.frame;
         return elements
     }
-
-    appendElements(root, elements) {
-        root.appendChild(elements.container);
-    }
 }
 
 class DeviceDesktop {
@@ -31,13 +23,13 @@ class DeviceDesktop {
 
         this.elements = this.createDeviceElements();
 
-        appendElements(container, this.elements);
+        this.appendElements(container, this.elements);
 
         this.screen = this.elements.screen;
     }
 
     createDeviceElements() {
-        elements = [];
+        let elements = [];
         elements.frame = document.createElement("div");
         elements.frame.classList.add("desktop-device");
         
@@ -68,13 +60,13 @@ class DeviceSmartphone {
 
         this.elements = this.createDeviceElements();
 
-        appendElements(container, this.elements);
+        this.appendElements(container, this.elements);
 
         this.screen = this.elements.screen;
     }
 
     createDeviceElements() {
-        elements = [];
+        let elements = [];
         elements.frame = document.createElement("div");
         elements.frame.classList.add("phone-device");
         
@@ -107,3 +99,6 @@ class DeviceSmartphone {
         this.screen.appendChild(element);
     }
 }
+
+let desktopContainer = document.querySelector(".container");
+desktopContainer.insertBefore((new DeviceShowcase()).elements.container, desktopContainer.querySelector(".app-info"));

@@ -358,6 +358,44 @@ header.page-header h1 {
     transform: initial;
   }
 }
+.device-showcase {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .device-showcase {
+    position: absolute;
+    display: initial;
+    width: 1200px;
+    top: 100vh;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  .device-showcase .desktop-device {
+    width: 80%;
+    background-color: #262122;
+    height: 600px;
+    padding: 0 2%;
+    padding-top: 1%;
+    border-radius: 5%;
+  }
+  .device-showcase .desktop-device .screen {
+    width: 100%;
+    height: 93%;
+    bottom: 0;
+  }
+  .device-showcase .desktop-device .camera {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    height: 10px;
+    width: 10px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+  }
+  .device-showcase .screen {
+    background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
+  }
+}
 :root {
   font-size: 62.5%;
 }
