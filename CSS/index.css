@@ -32,11 +32,12 @@ html p {
 body {
   padding: 0px;
   margin: auto;
+  background-color: #FFFFF0;
   font-family: 'PT Sans', sans-serif;
 }
 body a {
   text-decoration: none;
-  color: black;
+  color: #005366;
 }
 body h1 {
   font-size: 2.8rem;
@@ -47,7 +48,10 @@ body .about-header {
   text-align: center;
   margin-bottom: 30px;
 }
-body header {
+body .hide {
+  display: none;
+}
+header {
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -56,24 +60,24 @@ body header {
   max-width: 1100px;
   margin: auto;
 }
-body header h2 {
+header h2 {
   font-size: 2rem;
   margin: 0;
 }
-body header img {
+header img {
   cursor: pointer;
   margin-top: 5px;
   width: 30px;
   height: 30px;
 }
-body header nav {
+header nav {
   display: none;
 }
 @media (min-width: 1000px) {
-  body header img {
+  header img {
     display: none;
   }
-  body header nav {
+  header nav {
     width: 400px;
     display: flex;
     justify-content: space-around;
@@ -81,8 +85,8 @@ body header nav {
     flex-direction: row;
   }
 }
-body .menu {
-  background-color: #f2f2f2;
+.menu {
+  background-color: #BAF2E8;
   border-top: 1px solid #C0C0C0;
   border-bottom: 1px solid #C0C0C0;
   display: flex;
@@ -94,18 +98,16 @@ body .menu {
   z-index: 4;
   width: 100%;
 }
-body .menu ul {
+.menu ul {
   list-style: none;
 }
-body .menu li {
+.menu li {
   margin: 10px;
   font-size: 2rem;
   text-decoration: none;
 }
-body .hide {
-  display: none;
-}
-body .sign-up {
+.sign-up {
+  color: #005366;
   padding: 0px 20px;
   display: flex;
   justify-content: center;
@@ -113,24 +115,28 @@ body .sign-up {
   flex-direction: column;
   text-align: center;
 }
-body .sign-up p {
+.sign-up p {
   margin: 0px 0px 35px 0px;
   font-size: 1.1rem;
 }
-body .sign-up .sign-up-content input {
+.sign-up .sign-up-content input {
   line-height: 50px;
   width: 300px;
   align-self: center;
-  border: 1px solid black;
+  border: 1px solid #005366;
   font-size: 1rem;
   padding: 0px 10px;
   margin-bottom: 20px;
   text-align: center;
+  color: #005366;
 }
-body .sign-up .sign-up-content .sign-up-btn {
+.sign-up .sign-up-content input::placeholder {
+  color: #005366;
+}
+.sign-up .sign-up-content .sign-up-btn {
   line-height: 50px;
-  background-color: #F2522E;
-  color: white;
+  background-color: #F56358;
+  color: #FFFFF0;
   width: 300px;
   margin: auto;
   border-radius: 20px;
@@ -138,29 +144,29 @@ body .sign-up .sign-up-content .sign-up-btn {
   cursor: pointer;
 }
 @media (min-width: 1000px) {
-  body .sign-up .sign-up-content {
+  .sign-up .sign-up-content {
     display: flex;
     justify-content: none;
     align-items: none;
     flex-direction: row;
   }
-  body .sign-up .sign-up-content input {
+  .sign-up .sign-up-content input {
     margin: 0px 10px;
   }
-  body .sign-up .sign-up-content .sign-up-btn {
+  .sign-up .sign-up-content .sign-up-btn {
     margin: 0px 10px;
   }
 }
-body .testimony-img {
+.testimony-img {
   height: 300px;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: #BAF2E8;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
-body .testimonies {
+.testimonies {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -169,57 +175,58 @@ body .testimonies {
   max-width: 1100px;
   margin: auto;
 }
-body .testimonies .testimony-text {
+.testimonies .testimony-text {
+  color: #218DA6;
   padding: 0px 75px;
   text-align: center;
 }
-body .testimonies .testimony-text .testimony-giver {
-  color: grey;
+.testimonies .testimony-text .testimony-giver {
+  color: #005366;
   margin: 0px;
   padding: 0px 0px 30px 0px;
 }
 @media (min-width: 800px) {
-  body .testimonies {
+  .testimonies {
     display: flex;
     justify-content: space-around;
     align-items: none;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  body .testimonies .testimony {
+  .testimonies .testimony {
     width: 45%;
   }
-  body .testimonies .testimony-text {
+  .testimonies .testimony-text {
     padding: 0px 30px;
     text-align: center;
   }
 }
 @media (min-width: 1000px) {
-  body .testimonies {
+  .testimonies {
     display: flex;
     justify-content: space-around;
     align-items: none;
     flex-direction: row;
   }
-  body .testimonies .testimony {
+  .testimonies .testimony {
     width: 30%;
   }
-  body .testimonies .testimony-text {
+  .testimonies .testimony-text {
     padding: 0px 30px;
     text-align: center;
   }
 }
-body .about-content {
+.about-content {
   display: flex;
   justify-content: none;
   align-items: center;
   flex-direction: column;
 }
-body .about-content .gray-bg {
-  background-color: #f2f2f2;
+.about-content .gray-bg {
+  background-color: #BAF2E8;
   width: 100%;
 }
-body .about-content .role {
+.about-content .role {
   max-width: 1400px;
   margin: auto;
   padding-top: 30px;
@@ -228,43 +235,74 @@ body .about-content .role {
   align-items: none;
   flex-direction: column;
 }
-body .about-content .role h1 {
+.about-content .role h1 {
   text-align: center;
+  color: #005366;
+}
+@media (min-width: 1000px) {
+  .about-content .role {
+    display: flex;
+    justify-content: space-around;
+    align-items: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-content .role h1 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 @media (min-width: 1200px) {
-  body .about-content .role {
+  .about-content .role {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  body .about-content .role h1 {
+  .about-content .role h1 {
     width: 100%;
     margin-bottom: 40px;
   }
 }
+@media (min-width: 1000px) {
+  .about-content .user-interface .about-person {
+    width: 50%;
+  }
+  .about-content .user-interface .about-person .person-text {
+    padding: 0px 50px;
+  }
+}
 @media (min-width: 1200px) {
-  body .about-content .user-interface .about-person {
+  .about-content .user-interface .about-person {
     width: 33%;
   }
 }
-@media (min-width: 1200px) {
-  body .about-content .front-end .about-person {
-    width: 45%;
+@media (min-width: 1000px) {
+  .about-content .front-end .about-person {
+    width: 50%;
+  }
+  .about-content .front-end .about-person .person-text {
+    padding: 0px 50px;
   }
 }
 @media (min-width: 1200px) {
-  body .about-content .back-end .about-person {
+  .about-content .front-end .about-person {
+    width: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  .about-content .back-end .about-person {
     display: flex;
     justify-content: none;
     align-items: none;
     flex-direction: row;
     width: 75%;
     margin-bottom: 50px;
+    padding-left: 50px;
   }
-  body .about-content .back-end .about-person .person-text {
-    width: 60%;
+  .about-content .back-end .about-person .person-text {
+    width: 50%;
     padding: 0px 50px;
     display: flex;
     justify-content: center;
@@ -272,55 +310,76 @@ body .about-content .role h1 {
     flex-direction: column;
   }
 }
-body .about-content .about-person {
+@media (min-width: 1400px) {
+  .about-content .back-end .about-person {
+    padding-left: 100px;
+  }
+  .about-content .back-end .about-person .person-text {
+    width: 50%;
+    padding: 0px 100px;
+  }
+}
+.about-content .about-person {
   text-align: center;
   margin-bottom: 20px;
 }
-body .about-content .about-person .person-img {
+.about-content .about-person .person-img {
   height: 350px;
   width: 350px;
+  border: 3px solid #005366;
   border-radius: 50%;
 }
-body .about-content .about-person .person-text {
+.about-content .about-person .person-text {
   padding: 0px 20px;
 }
+.about-content .about-person .person-text h2 {
+  color: #005366;
+}
+.about-content .about-person .person-text p {
+  color: #218DA6;
+}
 @media (min-width: 800px) {
-  body .about-content .about-person .person-text {
+  .about-content .about-person .person-text {
     padding: 0px 100px;
   }
 }
 @media (min-width: 1200px) {
-  body .about-content .about-person .person-text {
-    padding: 0px 20px;
+  .about-content .about-person .person-text {
+    padding: 0px 75px;
   }
 }
-body .join-others {
+.join-others {
   text-align: center;
-  background-color: #f2f2f2;
+  color: #005366;
+  background-color: #BAF2E8;
   padding: 50px 20px;
 }
-body .join-others h2 {
+.join-others h2 {
   font-size: 2rem;
   margin: 0px;
   margin-bottom: 20px;
 }
-body .join-others h2 .colored-h2 {
-  color: #F2522E;
+.join-others h2 .colored-h2 {
+  color: #F56358;
 }
-body .join-others .sign-up-content input {
+.join-others .sign-up-content input {
   line-height: 50px;
   width: 300px;
   align-self: center;
-  border: 1px solid black;
+  border: 1px solid #005366;
   font-size: 1rem;
   padding: 0px 10px;
   margin-bottom: 20px;
   text-align: center;
+  color: #005366;
 }
-body .join-others .sign-up-content .sign-up-btn {
+.join-others .sign-up-content input::placeholder {
+  color: #005366;
+}
+.join-others .sign-up-content .sign-up-btn {
   line-height: 50px;
-  background-color: #F2522E;
-  color: white;
+  background-color: #F56358;
+  color: #FFFFF0;
   width: 300px;
   margin: auto;
   border-radius: 20px;
@@ -328,44 +387,52 @@ body .join-others .sign-up-content .sign-up-btn {
   cursor: pointer;
 }
 @media (min-width: 1000px) {
-  body .join-others .sign-up-content {
+  .join-others .sign-up-content {
     display: flex;
     justify-content: center;
     align-items: none;
     flex-direction: row;
   }
-  body .join-others .sign-up-content input {
+  .join-others .sign-up-content input {
     margin: 0px 10px;
   }
-  body .join-others .sign-up-content .sign-up-btn {
+  .join-others .sign-up-content .sign-up-btn {
     margin: 0px 10px;
   }
 }
 @media (min-width: 800px) {
-  body .join-others {
+  .join-others {
     padding: 50px 125px;
   }
 }
 @media (min-width: 1000px) {
-  body .join-others {
+  .join-others {
     padding: 50px 200px;
   }
 }
-body .features {
+.features {
   padding: 30px 30px 60px 30px;
   max-width: 1100px;
   margin: auto;
 }
-body .features h2 {
+.features h2 {
+  color: #005366;
   font-size: 2rem;
 }
-body footer {
+.features p {
+  color: #218DA6;
+}
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px;
 }
-body footer h3 {
+footer h3 {
+  color: #005366;
   margin: 0px 0px 20px 0px;
+}
+footer address {
+  color: #218DA6;
 }

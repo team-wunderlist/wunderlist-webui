@@ -1,0 +1,133 @@
+.about-content {
+    .flex(none, center, column);
+
+    .gray-bg {
+        background-color: @darkerBackgroundColor;
+        width: 100%;
+    }
+
+    .role{
+        max-width: 1400px;
+        margin: auto;
+        padding-top: 30px;
+        .flex(@dir: column);
+
+        h1 {
+            text-align: center;
+            color: @fontColor;
+        }
+
+        @media @tablet {
+            .flex(space-around);
+            flex-wrap: wrap;
+
+            h1 {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media @smallMonitor {
+            .flex(center, center, row);
+            flex-wrap: wrap;
+
+            h1 {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .user-interface {
+        .about-person {
+            @media @tablet {
+                width: 50%;
+
+                .person-text {
+                    padding: 0px 50px;
+                }
+            }
+
+            @media @smallMonitor {
+                width: 33%;
+            }
+        }
+    }
+
+    .front-end {
+        .about-person {
+            @media @tablet {
+                width: 50%;
+
+                .person-text {
+                    padding: 0px 50px;
+                }
+            }
+
+            @media @smallMonitor {
+                width: 50%;
+            }
+        }
+    }
+
+    .back-end {
+
+        @media @tablet {
+            .about-person {
+                .flex();
+                width: 75%;
+                margin-bottom: 50px;
+                padding-left: 50px;
+
+                .person-text {
+                    width: 50%;
+                    padding: 0px 50px;
+                    .flex(center, center, column);
+                }
+            }
+        }
+
+        @media @monitor {
+            .about-person {
+                padding-left: 100px;
+
+                .person-text {
+                    width: 50%;
+                    padding: 0px 100px;
+                }
+            }
+        }
+    }
+
+    .about-person {
+        text-align: center;
+        margin-bottom: 20px;
+        
+        .person-img {
+            height: 350px;
+            width: 350px;
+            border: 3px solid @fontColor;
+            border-radius: 50%;
+        }
+
+        .person-text {
+            h2 {
+                color: @fontColor;
+            }
+
+            p {
+                color: @lighterFontColor;
+            }
+
+            padding: 0px 20px;
+
+            @media @smallTablet {
+                padding: 0px 100px;
+            }
+
+            @media @smallMonitor {
+                padding: 0px 75px;
+            }
+        }
+    }
+}

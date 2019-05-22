@@ -1,0 +1,47 @@
+.join-others {
+    text-align: center;
+    color: @fontColor;
+    background-color: @darkerBackgroundColor;
+    padding: 50px 20px;
+
+    h2 {
+        font-size: 2rem;
+        margin: 0px;
+        margin-bottom: 20px;
+
+        .colored-h2 {
+            color: #F56358;
+        }
+    }
+
+    .sign-up-content {
+
+        input {
+            .emailInput();
+        }
+
+        .sign-up-btn {
+            .signUpButton();
+        }
+
+        @media @tablet {
+            .flex(center);
+
+            input {
+                margin: 0px 10px;
+            }
+
+            .sign-up-btn {
+                margin: 0px 10px;
+            }
+        }
+    }
+
+    @media @smallTablet {
+        padding: 50px 125px;
+    }
+
+    @media @tablet {
+        padding: 50px 200px;
+    }
+}

@@ -9,17 +9,22 @@
     line-height: 50px;
     width: 300px;
     align-self: center;
-    border:1px solid black;
+    border:1px solid @fontColor;
     font-size: 1rem;
     padding: 0px 10px;
     margin-bottom: 20px;
     text-align: center;
+    color: @fontColor;
+
+    &::placeholder {
+        color: @fontColor;
+    }
 }
 
 .signUpButton() {
     line-height: 50px;
-    background-color: #F2522E;
-    color: white;
+    background-color: #F56358;
+    color: @backgroundColor;
     width: 300px;
     margin: auto;
     border-radius: 20px;

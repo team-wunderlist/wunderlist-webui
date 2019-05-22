@@ -1,0 +1,33 @@
+.sign-up {
+    color: @fontColor;
+    padding: 0px 20px;
+    .flex(center, center, column);
+    text-align: center;
+
+    p {
+        margin: 0px 0px 35px 0px;
+        font-size: 1.1rem;
+    }
+    
+    .sign-up-content {
+        input {
+            .emailInput();
+        }
+
+        .sign-up-btn {
+            .signUpButton();
+        }
+
+        @media @tablet {
+            .flex();
+
+            input {
+                margin: 0px 10px;
+            }
+
+            .sign-up-btn {
+                margin: 0px 10px;
+            }
+        }
+    }
+}

@@ -3,30 +3,33 @@
         <title>Lambda Times</title>
         <link rel="icon" href="./favicon.ico">
         <link rel="stylesheet" type="text/css" href="./CSS/index.css" />
-        <script src="./components/menu.js" async></script>
+        <script src="./components/Menu/Menu.js" async></script>
     </head>
     <body>
         <header>
             <a href="/"><h2 class='app-name'>Wunderlist</h2></a>
             <img class="menu-btn" src="./assets/Hamburger_icon.svg.png" alt="menu button">
             <nav class="menu-nav">
+                <a href="/">Home</a>
                 <a href="./about.html">About Us</a>
-                <a href="#">Product</a>
-                <a href="#">Contact Us</a>
+                <a href="./product.html">Product</a>
                 <a href="#">Log In</a>
             </nav>
         </header>
 
         <div class="menu hide">
             <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Product</a></li>
-                <li><a href="#">Why Wunderlist?</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./product.html">Product</a></li>
+                <li><a href="#">Log In</a></li>
             </ul>
         </div>
-        
-        <h1 class="about-header">This is us. The team behind the dream.</h1>
+
+        <section class="sign-up">
+            <h1>This is us. The team behind the dream.</h1>
+            <p>What a great bunch we are.</p>
+        </section>
 
         <section class="about-content">
             <div class="gray-bg">
@@ -58,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="role front-end" style="background-color: white">
+            <div class="role front-end">
                 <h1>Front-End</h1>
                 <div class="about-person">
                     <img class="person-img" src="./assets/leonel-flores.jpg"/>
@@ -90,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="role back-end" style="background-color: white">
+            <div class="role back-end">
                 <h1>Team Lead</h1>
                 <div class="about-person">
                     <img class="person-img" src="./assets/jeffery-artrip.jpg"/>
