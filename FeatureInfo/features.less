@@ -21,5 +21,40 @@
             max-width: 90vw;
             max-height: 60vw;
         }
+
+        @media @desktopBreakpoint {
+            .flex-row(space-between, center);
+            width: 100%;
+            div {
+                width: 30rem;
+                height: 30rem;
+                max-width: 40%;
+                max-height: 100%;
+            }
+            p {
+                width: 70%;
+                text-align: left;
+            }
+        }
+    }
+    @media @desktopBreakpoint{
+        .feature-info:nth-child(2n + 2){
+            flex-direction: row-reverse;
+
+            p{
+                text-align: right;
+            }
+        }
+    }
+
+    &.no-image {
+        .feature-info {
+            p {
+                text-align: center;
+                @media @desktopBreakpoint {
+                    text-align: center;
+                }
+            }
+        }
     }
 }

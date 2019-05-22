@@ -286,6 +286,41 @@ header.page-header h1 {
   max-width: 90vw;
   max-height: 60vw;
 }
+@media (min-width: 1000px) {
+  .features .feature-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .features .feature-info div {
+    width: 30rem;
+    height: 30rem;
+    max-width: 40%;
+    max-height: 100%;
+  }
+  .features .feature-info p {
+    width: 70%;
+    text-align: left;
+  }
+}
+@media (min-width: 1000px) {
+  .features .feature-info:nth-child(2n + 2) {
+    flex-direction: row-reverse;
+  }
+  .features .feature-info:nth-child(2n + 2) p {
+    text-align: right;
+  }
+}
+.features.no-image .feature-info p {
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .features.no-image .feature-info p {
+    text-align: center;
+  }
+}
 .nav-button {
   position: fixed;
   z-index: 1000;
