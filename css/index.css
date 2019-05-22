@@ -232,6 +232,7 @@ header nav .navContainer .current {
   margin: 0;
   font-size: 1.1rem;
   text-align: center;
+  color: black;
 }
 .card-container .card-data {
   display: flex;
