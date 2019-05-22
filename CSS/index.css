@@ -73,6 +73,9 @@ header img {
 header nav {
   display: none;
 }
+header nav a {
+  border-bottom: 2px solid #FFFFF0;
+}
 @media (min-width: 1000px) {
   header img {
     display: none;
@@ -83,6 +86,9 @@ header nav {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+  }
+  header nav a {
+    border-bottom: 2px solid #FFFFF0;
   }
 }
 .menu {
@@ -139,6 +145,7 @@ header nav {
   color: #FFFFF0;
   width: 300px;
   margin: auto;
+  border: 1px solid #F56358;
   border-radius: 20px;
   display: block;
   cursor: pointer;
@@ -382,6 +389,7 @@ header nav {
   color: #FFFFF0;
   width: 300px;
   margin: auto;
+  border: 1px solid #F56358;
   border-radius: 20px;
   display: block;
   cursor: pointer;

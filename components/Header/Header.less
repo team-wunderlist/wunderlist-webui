@@ -17,6 +17,10 @@ header {
 
     nav {
         display: none;
+
+        a {
+            border-bottom: 2px solid @backgroundColor;
+        }
     }
 
     @media @tablet {
@@ -26,7 +30,11 @@ header {
 
         nav {
             width: 400px;
-            .flex(space-around, center)
+            .flex(space-around, center);
+
+            a {
+                border-bottom: 2px solid @backgroundColor;
+            }
         }
     }
 }
