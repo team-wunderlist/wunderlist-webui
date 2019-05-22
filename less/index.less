@@ -29,6 +29,14 @@ body {
     background-repeat: repeat;  
     background-position: -5% 0;
 }
+
+.container{
+    @media @desktopBreakpoint {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
 .background-container {
     overflow-x: hidden;
     position: relative;
@@ -73,7 +81,7 @@ body {
 }
 .top-section {
     height: 100vh;
-    width: 100%;
+    width: 100%;    
     max-width: 100vw;
     position: absolute;
     top:0;
@@ -102,13 +110,13 @@ body {
         font-family: @robotoCondensed;
     }
     h1{
-        font-size: 5.4rem;
+        font-size: 5.4em;
         font-weight: 500;
     }
     h2 {
         margin: 0 auto;
         font-weight: 300;
-        font-size: 2.4rem;
+        font-size: 2.4em;
         width: 60%;
     }
     button{
@@ -131,6 +139,19 @@ body {
 
 
 }
+
+.desktop-background {
+    display: none;
+    @media @desktopBreakpoint {
+        display: initial;
+        position: absolute;
+        min-width: 100%;
+        background: @backgroundGradient;
+        height: 100vh;
+        top: 0;
+    }
+}
+
 section.app-info {
     .flex-column();
 }

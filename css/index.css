@@ -277,6 +277,11 @@ header.page-header h1 {
   display: block;
   border: 0.1rem solid #F2F2F2;
 }
+@media (min-width: 1000px) {
+  .nav-button {
+    display: none;
+  }
+}
 .mobile-nav {
   position: fixed;
   min-width: 100vw;
@@ -334,6 +339,25 @@ header.page-header h1 {
   bottom: 0;
   transform: translate(-50%);
 }
+@media (min-width: 1000px) {
+  .info-drawer {
+    min-width: 100%;
+    width: 100%;
+    min-height: 20rem;
+    border-radius: 0;
+  }
+  .info-drawer p {
+    display: block;
+  }
+  .info-drawer .expand-button {
+    display: none;
+  }
+  .info-drawer h2 {
+    position: relative;
+    left: initial;
+    transform: initial;
+  }
+}
 :root {
   font-size: 62.5%;
 }
@@ -353,6 +377,12 @@ body {
   background-size: 400px 816px;
   background-repeat: repeat;
   background-position: -5% 0;
+}
+@media (min-width: 1000px) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 .background-container {
   overflow-x: hidden;
@@ -427,13 +457,13 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 .top-section h1 {
-  font-size: 5.4rem;
+  font-size: 5.4em;
   font-weight: 500;
 }
 .top-section h2 {
   margin: 0 auto;
   font-weight: 300;
-  font-size: 2.4rem;
+  font-size: 2.4em;
   width: 60%;
 }
 .top-section button {
@@ -452,6 +482,19 @@ body {
   .top-section {
     position: relative;
     background: none;
+  }
+}
+.desktop-background {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .desktop-background {
+    display: initial;
+    position: absolute;
+    min-width: 100%;
+    background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
+    height: 100vh;
+    top: 0;
   }
 }
 section.app-info {
