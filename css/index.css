@@ -173,6 +173,18 @@ header.page-header h1 {
   align-items: center;
   margin-top: 2.4rem;
 }
+@media (min-width: 1000px) {
+  .developer-info {
+    width: 90%;
+    max-width: 100rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
 .developer {
   margin-bottom: 4rem;
   display: flex;
@@ -230,6 +242,11 @@ header.page-header h1 {
   height: 1px;
   flex-grow: 1;
   border: 0.5px solid #262122;
+}
+@media (min-width: 1000px) {
+  .developer {
+    width: 33%;
+  }
 }
 .nav-bar {
   width: 100%;

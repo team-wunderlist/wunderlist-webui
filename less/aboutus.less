@@ -41,6 +41,14 @@ header.page-header {
 .developer-info {
     .flex-column();
     margin-top: 2.4rem;
+
+    @media @desktopBreakpoint {
+        width: 90%;
+        max-width: 100rem;
+        .flex-row(space-around, flex-start);
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
 }
 
 .developer {
@@ -94,5 +102,9 @@ header.page-header {
             flex-grow: 1;
             border: .5px solid @colorBlack;
         }
+    }
+
+    @media @desktopBreakpoint {
+        width: 33%;
     }
 }
