@@ -494,7 +494,7 @@ header.page-header h1 {
     overflow-x: hidden;
     overflow-y: hidden;
     display: initial;
-    width: 1000px;
+    width: 980px;
     height: 650px;
     top: 100vh;
     transform: translateY(-50%);
@@ -682,10 +682,19 @@ body {
   height: 6rem;
 }
 @media (min-width: 1000px) {
+  .top-section button {
+    width: 50%;
+    border-radius: 2rem;
+  }
+}
+@media (min-width: 1000px) {
   .top-section {
     position: relative;
     background: none;
-    padding-bottom: 400px;
+    padding-bottom: 500px;
+  }
+  .top-section .top-section-container {
+    height: 30rem;
   }
 }
 .desktop-background {

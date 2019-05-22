@@ -126,12 +126,22 @@ body {
         color: @colorWhite;
         width: 80%;
         height: 6rem;
+
+        @media @desktopBreakpoint {
+            width: 50%;
+            border-radius: 2rem;
+        }
     }
 
     @media @desktopBreakpoint {
         position: relative;
         background: none;
-        padding-bottom: 400px;
+        padding-bottom: 500px;
+
+        
+        .top-section-container {
+            height: 30rem;
+        }
     }
 
 
