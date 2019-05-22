@@ -11,14 +11,14 @@ class Feature {
     createElements() {
         let elements = [];
         elements.feature = document.createElement("div");
-        elements.feature.classList.add("info-card");
+        elements.feature.classList.add("feature-info");
         
         elements.description = document.createElement("p");
 
         elements.feature.appendChild(elements.description);
         
         if(this.data.image){
-            elements.image = document.createElement("img");
+            elements.image = document.createElement("div");
             elements.feature.appendChild(elements.image);
         }
 
@@ -28,9 +28,9 @@ class Feature {
     populateElements(elements, data) {
         elements.description.textContent = data.description;
         if (data.image) {
-            elements.image.src = data.image;
+            elements.image.style.backgroundImage = `url(${data.image})`;
         } else {
-            elements.description.classList.add("no-image");
+            elements.feature.classList.add("no-image");
         }
     }
 
@@ -38,3 +38,22 @@ class Feature {
         root.appendChild(elements.feature);
     }
 }
+
+let featureDataArray = [
+    {
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        
+    },
+    {
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        
+    },
+]
+
+let featureComponents = featureDataArray.map((data) => {
+    return new Feature(document.querySelector(".features"), data);
+})
