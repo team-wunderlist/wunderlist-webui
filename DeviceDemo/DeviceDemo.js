@@ -1,5 +1,28 @@
 class DeviceShowcase {
+    constructor(root) {
+        this.root = root;
 
+        this.elements = this.createDevices();
+
+        appendElements(root, this.elements);
+    }
+
+    createDevices() {
+        elements = [];
+        elements.container = document.createElement("div");
+        elements.container.classList.add("device-showcase");
+
+        this.desktop = new DeviceDesktop(elements.container);
+        this.smartphone = new DeviceSmartphone(elements.container);
+
+        elements.desktop = this.desktop.elements.frame;
+        elements.smartphone = this.smartphone.elements.frame;
+        return elements
+    }
+
+    appendElements(root, elements) {
+        root.appendChild(elements.container);
+    }
 }
 
 class DeviceDesktop {
@@ -53,7 +76,7 @@ class DeviceSmartphone {
     createDeviceElements() {
         elements = [];
         elements.frame = document.createElement("div");
-        elements.frame.classList.add("desktop-device");
+        elements.frame.classList.add("phone-device");
         
         elements.screen = document.createElement("div");
         elements.screen.classList.add("screen");
