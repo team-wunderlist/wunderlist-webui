@@ -406,6 +406,7 @@ header.page-header h1 {
     align-items: center;
     min-width: 100%;
     min-height: 5rem;
+    background: initial;
     background-color: transparent;
     background-repeat: no-repeat;
     background-attachment: fixed;

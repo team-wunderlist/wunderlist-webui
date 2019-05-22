@@ -114,12 +114,12 @@ class NavMenu {
     fadeInDesktop(e) {
         if(window.wunderlistUtils.GetCurrentBreakpoint() !== "desktop")
             return;
-        if (!document.querySelector("#homepage-body")){
+/*         if (!document.querySelector("#homepage-body")){
             this.background.dataset.open = "true";
             this.background.style.opacity = 1;
             return;
-        }
-        if (window.scrollY > 1  && this.background.dataset.open === "false"){
+        } */
+        if (window.scrollY > 10  && this.background.dataset.open === "false"){
             this.background.dataset.open = "true";
             TweenMax.fromTo(this.background, NavMenuAnimationDur * 2,
                 {
@@ -129,7 +129,7 @@ class NavMenu {
                     opacity: 1
                 });
         }
-        if (window.scrollY <= 1) {
+        if (window.scrollY <= 10 && this.background.dataset.open === "true") {
             this.background.dataset.open = "false";
             TweenMax.fromTo(this.background, NavMenuAnimationDur * 2,
                 {
