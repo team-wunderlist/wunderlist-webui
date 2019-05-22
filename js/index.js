@@ -40,9 +40,11 @@ window.wunderlistUtils.breakpoints = [
 window.wunderlistUtils.GetCurrentBreakpoint = function GetCurrentBreakpoint(){
     let screenWidth = window.innerWidth;
     let bp;
+    let maxWidth = 0;
     window.wunderlistUtils.breakpoints.forEach(breakpoint => {
-        if(screenWidth >= breakpoint.width) {
+        if(screenWidth >= breakpoint.width && breakpoint.width >= maxWidth) {
             bp = breakpoint.name;
+            maxWidth = breakpoint.width;
         }
     });
     return bp;

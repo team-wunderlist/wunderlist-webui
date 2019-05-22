@@ -42,12 +42,23 @@
         text-decoration:none;
         z-index: 100;
     }
+    .nav-background{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left:0;
+        background-image: @backgroundGradient;
+        opacity:0;
+    }
 
     @media @desktopBreakpoint{
         .flex-row(space-evenly, center);
         min-width: 100%;
         min-height: 5rem;
         background-color: transparent;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         font-size: 1.8rem;
     }
 }
