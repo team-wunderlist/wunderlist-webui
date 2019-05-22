@@ -392,6 +392,48 @@ header.page-header h1 {
     background-color: #F2F2F2;
     border-radius: 50%;
   }
+  .device-showcase .phone-device {
+    position: absolute;
+    width: 200px;
+    height: 370px;
+    padding: 0.2% 1%;
+    right: 0;
+    bottom: 0;
+    background-color: #F2F2F2;
+    border-radius: 2rem;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
+    transform: translateX(-100%) translateY(10%);
+  }
+  .device-showcase .phone-device .screen {
+    width: 100%;
+    height: 92%;
+  }
+  .device-showcase .phone-device .camera {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5%;
+    height: 5px;
+    width: 5px;
+    background-color: #262122;
+    border-radius: 50%;
+  }
+  .device-showcase .phone-device .speaker {
+    display: block;
+    width: 21px;
+    height: 1px;
+    background-color: #262122;
+    margin: 0 auto;
+    margin-bottom: 1%;
+  }
+  .device-showcase .phone-device .home-button {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #262122;
+    margin: 0 auto;
+    margin-top: 1%;
+    border-radius: 50%;
+  }
   .device-showcase .screen {
     background: linear-gradient(129.34deg, #EC4A26 22.12%, #D02904 95.08%);
   }

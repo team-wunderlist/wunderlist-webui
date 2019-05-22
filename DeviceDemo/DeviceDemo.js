@@ -77,7 +77,7 @@ class DeviceSmartphone {
         elements.camera.classList.add("camera");
 
         elements.speaker = document.createElement("span");
-        elements.camera.classList.add("speaker");
+        elements.speaker.classList.add("speaker");
 
         elements.homeButton = document.createElement("span");
         elements.homeButton.classList.add("home-button");
