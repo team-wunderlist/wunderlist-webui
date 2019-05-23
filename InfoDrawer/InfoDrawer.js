@@ -113,18 +113,25 @@ class InfoDrawer {
     }
 }
 let appInfoContainer = document.querySelector(".app-info");
-new InfoDrawer(appInfoContainer, {
-    title: "Manage your time",
-    description: "Wunderlist allows you to manage your time effectivly and efficiently. Your daily tasks will become a breeze with recurring tasks and one-off’s slotting into your busy schedule intelligently",
-    image: "assets/clock.svg"
-})
-new InfoDrawer(appInfoContainer, {
-    title: "Product info 2",
-    description: "Infomation about product",
-    image: "assets/clock.svg"
-})
-new InfoDrawer(appInfoContainer, {
-    title: "Product info 3",
-    description: "Infomation about product",
-    image: "assets/clock.svg"
+
+let appInfoArray = [
+    {
+        title: "Manage your time",
+        description: "Wunderlist allows you to manage your time effectivly and efficiently. Your daily tasks will become a breeze with recurring tasks and one-off’s slotting into your busy schedule intelligently",
+        image: "assets/clock.svg"
+    },
+    {
+        title: "The power of search",
+        description: "With Wunderlist, you're never left wondering where and when you set your tasks. Our powerful search tool allows you to quickly find the tasks you need. None of the hassle of frantically scrolling your lists to find the one thing you need to do. Simple.",
+        image: "assets/search.svg"
+    },
+    {
+        title: "Never lose track",
+        description: "We keep track of what you've completed and what you have left to do, so you don't have to. Simply open the app and you will be greeted with the daily tasks that are ahead. Don't waste time thinking about your schedule. Focus on what's important.",
+        image: "assets/checkmark.svg"
+    }
+]
+
+let infoDrawerObjects = appInfoArray.map(data => {
+    return new InfoDrawer(appInfoContainer, data);
 })
