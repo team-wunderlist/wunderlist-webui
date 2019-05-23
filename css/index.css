@@ -219,7 +219,7 @@ header.page-header h1 {
   background-size: cover;
 }
 .developer p {
-  font-size: 1.4rem;
+  font-size: 1, 4rem;
   font-style: italic;
   color: #4E4E4E;
   width: 85%;
@@ -266,7 +266,7 @@ header.page-header h1 {
   font-weight: 300;
 }
 .nav-bar .register-tab {
-  font-size: 1.4rem;
+  font-size: 1, 4rem;
   background-color: #262122;
   display: flex;
   justify-content: space-evenly;
@@ -673,13 +673,13 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 .top-section h1 {
-  font-size: 5.4em;
+  font-size: 5.4rem;
   font-weight: 500;
 }
 .top-section h2 {
   margin: 0 auto;
   font-weight: 300;
-  font-size: 2.4em;
+  font-size: 2.4rem;
   width: 60%;
 }
 .top-section button {
