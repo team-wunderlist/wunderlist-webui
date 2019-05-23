@@ -485,16 +485,11 @@ header.page-header h1 {
     min-height: 20rem;
     border-radius: 0;
   }
-  .info-drawer p {
-    display: block;
-  }
   .info-drawer .expand-button {
-    display: none;
+    bottom: -1rem;
   }
-  .info-drawer h2 {
-    position: relative;
-    left: initial;
-    transform: initial;
+  .info-drawer p {
+    text-align: center;
   }
 }
 @media (min-width: 1000px) {

@@ -47,16 +47,17 @@ class InfoDrawer {
     }
 
     expandDrawer() {
-        if(window.wunderlistUtils.GetCurrentBreakpoint() !== "mobile")
-            return;
         let description = this.elements.description;
         if (this.elements.container.classList.contains("open")){
             let fromHeight =  description.clientHeight;
-            TweenMax.to(this.elements.container,infoDrawerExpandDur / 2, {
-                borderRadius: "50%",
-                width: "80vw",
-                padding: "0 0rem"
-            })
+            if (window.wunderlistUtils.GetCurrentBreakpoint() === "mobile"){
+                TweenMax.to(this.elements.container,infoDrawerExpandDur / 2, {
+                    borderRadius: "50%",
+                    width: "80vw",
+                    padding: "0 0rem",
+                    clearProps:"all"
+                })
+            }
             TweenMax.to(this.elements.title,infoDrawerExpandDur / 2, {
                 marginTop: "1em",
             })
@@ -69,7 +70,6 @@ class InfoDrawer {
             TweenMax.to(this.elements.expandButton, infoDrawerExpandDur / 2, {
                 transform: `rotate(0deg)`,
             })
-            console.log(this.buttonTransform);
             TweenMax.fromTo(description, infoDrawerExpandDur / 2, {
                 height: `${fromHeight}px`,
             },
@@ -84,11 +84,13 @@ class InfoDrawer {
             TweenMax.to(this.elements.title,infoDrawerExpandDur, {
                 marginTop: "0em",
             })
-            TweenMax.to(this.elements.container,infoDrawerExpandDur, {
-                borderRadius: "2rem",
-                width: "90vw",
-                padding: "0 1rem",
-            })
+            if (window.wunderlistUtils.GetCurrentBreakpoint() === "mobile"){
+                TweenMax.to(this.elements.container,infoDrawerExpandDur, {
+                    borderRadius: "2rem",
+                    width: "90vw",
+                    padding: "0 1rem",
+                })
+            }
             TweenMax.to(this.elements.description, infoDrawerExpandDur, {
                 marginBottom: "2em",
             })
