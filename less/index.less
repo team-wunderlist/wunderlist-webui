@@ -34,7 +34,7 @@ body {
 }
 
 .background-container {
-    overflow: hidden;
+    overflow-x: hidden;
     position: relative;
     z-index: 0;
     width: 100%;
@@ -64,10 +64,10 @@ body {
             background-position: -5% 0;
         }
 
-        @media @tabletBreakpoint {
-            display: none;
-        }
-    
+        
+    }
+    @media @tabletBreakpoint {
+        display: none;
     }
     @media @desktopBreakpoint {
         height: 8rem;

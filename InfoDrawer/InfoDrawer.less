@@ -28,8 +28,10 @@
         // top:50%;
         // left: 50%;
         content: "";
-        height: 20rem;
-        width: 20rem;
+        height: 48vw;
+        width: 48vw;
+        max-height: 30rem;
+        max-width: 30rem;
         margin-bottom: 5rem;
 /*         min-width: 50%;
         min-height: 50%; */
@@ -49,6 +51,9 @@
         bottom: 0;
         margin: 0 auto;
     }
+    @media (max-width: 385px) {
+        font-size: 2.2rem;
+    }
     @media @tabletBreakpoint {
         margin-bottom: 6rem;
         min-height: 20rem;
@@ -59,6 +64,7 @@
         p {
             text-align: center;
         }
+        
     }
     @media @desktopBreakpoint {
         min-width: 100%;
