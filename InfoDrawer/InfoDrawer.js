@@ -10,7 +10,7 @@ class InfoDrawer {
 
         this.appendElements(this.elements, this.root);
 
-        this.elements.container.addEventListener("click", this.expandDrawer.bind(this))
+        this.elements.container.addEventListener("click", this.expandDrawer.bind(this));
     }
 
     createElementTree() {
@@ -19,6 +19,10 @@ class InfoDrawer {
         elements.container.classList.add("info-drawer");
         elements.title = document.createElement("h2");
         elements.container.appendChild(elements.title);
+
+        elements.image = document.createElement("div");
+        elements.container.appendChild(elements.image);
+        elements.image.classList.add("info-icon");
 
         elements.expandButton = document.createElement("span");
         elements.expandButton.classList.add("expand-button");
@@ -35,6 +39,7 @@ class InfoDrawer {
         elements.title.textContent = content.title;
         elements.description.textContent = content.description;
         elements.expandButton.textContent = "+";
+        elements.image.style.backgroundImage = `url(${content.image})`;
     }
 
     appendElements(elements, root) {
@@ -46,47 +51,78 @@ class InfoDrawer {
             return;
         let description = this.elements.description;
         if (this.elements.container.classList.contains("open")){
-            description.style.display = "none";
+            let fromHeight =  description.clientHeight;
             TweenMax.to(this.elements.container,infoDrawerExpandDur / 2, {
                 borderRadius: "50%",
-                width: "80vw"
+                width: "80vw",
+                padding: "0 0rem"
             })
             TweenMax.to(this.elements.title,infoDrawerExpandDur / 2, {
-                top: "50%",
+                marginTop: "1em",
+            })
+            TweenMax.to(this.elements.description, infoDrawerExpandDur / 2, {
+                marginBottom: "0em",
+            })
+            TweenMax.to(this.elements.image, infoDrawerExpandDur / 2, {
+                marginBottom: "5rem",
+            })
+            TweenMax.to(this.elements.expandButton, infoDrawerExpandDur / 2, {
+                transform: `rotate(0deg)`,
+            })
+            console.log(this.buttonTransform);
+            TweenMax.fromTo(description, infoDrawerExpandDur / 2, {
+                height: `${fromHeight}px`,
+            },
+            {
+                height: `0px`,
             })
 
         } else {
+            description.style.height = "auto";
+            let targetHeight = description.clientHeight;
+            description.style.height = "0px";
             TweenMax.to(this.elements.title,infoDrawerExpandDur, {
-                top: "5%",
+                marginTop: "0em",
             })
             TweenMax.to(this.elements.container,infoDrawerExpandDur, {
-                borderRadius: "0%",
-                width: "100vw"
+                borderRadius: "2rem",
+                width: "90vw",
+                padding: "0 1rem",
             })
-            setTimeout( () => {
-                description.style.display = "block";
-                TweenMax.fromTo(description, infoDrawerExpandDur * .8, 
-                {
-                    opacity: 0
-                },
-                {
-                    opacity: 1
-                })
-            }, infoDrawerExpandDur * 1000);
+            TweenMax.to(this.elements.description, infoDrawerExpandDur, {
+                marginBottom: "2em",
+            })
+            TweenMax.to(this.elements.image, infoDrawerExpandDur, {
+                marginBottom: "2rem",
+            })
+            TweenMax.to(this.elements.expandButton, infoDrawerExpandDur, {
+                transform: `rotate(45deg)`,
+            })
+            TweenMax.fromTo(description, infoDrawerExpandDur, {
+                height: `0px`,
+                opacity: 0,
+            },
+            {
+                height: `${targetHeight}px`,
+                opacity: 1
+            })
         }
         this.elements.container.classList.toggle("open");
     }
 }
 let appInfoContainer = document.querySelector(".app-info");
 new InfoDrawer(appInfoContainer, {
-    title: "Product info 1",
-    description: "Infomation about product"
+    title: "Manage your time",
+    description: "Wunderlist allows you to manage your time effectivly and efficiently. Your daily tasks will become a breeze with recurring tasks and one-off’s slotting into your busy schedule intelligently",
+    image: "assets/clock.svg"
 })
 new InfoDrawer(appInfoContainer, {
     title: "Product info 2",
-    description: "Infomation about product"
+    description: "Infomation about product",
+    image: "assets/clock.svg"
 })
 new InfoDrawer(appInfoContainer, {
     title: "Product info 3",
-    description: "Infomation about product"
+    description: "Infomation about product",
+    image: "assets/clock.svg"
 })

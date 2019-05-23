@@ -444,29 +444,40 @@ header.page-header h1 {
   min-height: 80vw;
   border-radius: 50%;
   color: #F2F2F2;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 2.4rem;
   font-weight: 300;
   margin-bottom: 4rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  overflow-y: hidden;
 }
 .info-drawer h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  font-weight: normal;
+  margin-top: 1em;
   width: 80%;
   text-align: center;
-  transform: translate(-50%, -50%);
+}
+.info-drawer .info-icon {
+  content: "";
+  height: 20rem;
+  width: 20rem;
+  margin-bottom: 5rem;
+  /*         min-width: 50%;
+        min-height: 50%; */
+  background-size: contain;
 }
 .info-drawer p {
-  display: none;
+  font-family: 'Roboto', sans-serif;
+  height: 0px;
+  overflow-y: hidden;
 }
 .info-drawer .expand-button {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
   font-size: 4.6rem;
   position: absolute;
-  left: 50%;
   bottom: 0;
-  transform: translate(-50%);
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .info-drawer {
