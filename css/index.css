@@ -292,6 +292,13 @@ header.page-header h1 {
 .features {
   margin-top: 3rem;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: hidden;
 }
 .features .feature-info {
   display: flex;
@@ -340,6 +347,9 @@ header.page-header h1 {
   }
 }
 @media (min-width: 1000px) {
+  .features {
+    display: initial;
+  }
   .features .feature-info:nth-child(2n + 2) {
     flex-direction: row-reverse;
   }

@@ -1,6 +1,10 @@
 .features {
     margin-top: 3rem;
     height: auto;
+    .flex-row();
+    flex-wrap: nowrap;
+    width:100%;
+    overflow-x: hidden;
     .feature-info {
         .flex-column(space-between);
         flex-direction: column-reverse;
@@ -42,6 +46,7 @@
     }
 
     @media @desktopBreakpoint{
+        display: initial;
         .feature-info:nth-child(2n + 2){
             flex-direction: row-reverse;
 
