@@ -1,0 +1,42 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:100%;
+    background-color: @bgcolor;
+    @media @tablet{
+        width: @tabWidth;
+        margin:auto;
+    }
+    @media @desktop{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+    font-size:1rem;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+img{
+    width: 100%;
+}
