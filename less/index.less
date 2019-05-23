@@ -40,6 +40,7 @@ body {
     width: 100%;
     height: auto;
     .background {
+        overflow: hidden;
         width: 150vh;
         min-width: 150vw;
         height: 150vh;
@@ -53,6 +54,17 @@ body {
         transform-origin: 0px 0px;
         transform: translateX(60vw) translateY(-50%) rotate(45deg);
 
+        .overlay {
+            display: none;
+            height: 150%;
+            width: 150%;
+            border-radius: inherit;
+            background: url("../assets/background.svg");
+            background-size: 400px 816px;
+            background-repeat: repeat;  
+            background-position: -5% 0;
+        }
+
         @media @tabletBreakpoint {
             display: none;
         }
@@ -61,14 +73,6 @@ body {
     @media @desktopBreakpoint {
         height: 8rem;
     }
-}
-.home-container {
-    background-image: url("../assets/background.svg");
-    background-size: 400px 816px;
-    background-repeat: repeat;  
-    background-position: -5% 0;
-    width:auto;
-    height:auto;
 }
 .top-section {
     height: 100vh;
@@ -86,10 +90,6 @@ body {
     font-family: @roboto;
     font-style: normal;
     text-align: center;
-    background-image: url("../assets/background.svg");
-    background-size: 400px 816px;
-    background-repeat: repeat;  
-    background-position: -5% 0;
 
     .top-section-container{
         width: 100%;
