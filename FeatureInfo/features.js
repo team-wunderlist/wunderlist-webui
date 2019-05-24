@@ -41,17 +41,17 @@ class Feature {
 
 let featureDataArray = [
     {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        image: "assets/test-image.png"
+        description: "We make it easy to overview all of your daily tasks coming up so you don't have to wonder what's coming up next. Just open the web app and we'll have your tasks prepared for you. Just take a glance.",
+        image: "assets/feature-2.svg"
 
     },
     {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        image: "assets/test-image.png"
+        description: "Tasks can be changed and marked as done at any point, no matter where you are. Without an app downloaded clogging up your phone, you can access your todo list from anywhere on the go.",
+        image: "assets/feature-1.svg"
     },
     {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        image: "assets/test-image.png"
+        description: "We designed our interface to be easy for everyone to use and understand. In a pinch, we make it quick and easy for you to add tasks. With your tasks being hosted in the cloud, you'll never have to second guess if your tasks will be there when you get back, or wehn you open the app on a different device. We've got you covered.",
+        image: "assets/feature-3.svg"
     },
 ]
 

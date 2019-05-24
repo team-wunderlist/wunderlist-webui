@@ -704,6 +704,7 @@ body {
   color: #F2F2F2;
   width: 80%;
   height: 6rem;
+  vertical-align: middle;
 }
 @media (min-width: 1000px) {
   .top-section button {
