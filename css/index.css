@@ -292,13 +292,10 @@ header.page-header h1 {
 .features {
   margin-top: 3rem;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: 100%;
-  overflow-x: hidden;
+  /*     .flex-row();
+    flex-wrap: nowrap;
+    width:100%;
+    overflow-x: hidden; */
 }
 .features .feature-info {
   display: flex;
@@ -308,6 +305,7 @@ header.page-header h1 {
   flex-direction: column-reverse;
   height: auto;
   margin-bottom: 6rem;
+  min-width: 90vw;
 }
 .features .feature-info p {
   width: 90%;
@@ -328,11 +326,13 @@ header.page-header h1 {
 }
 @media (min-width: 1000px) {
   .features .feature-info {
+    transform: initial !important;
     margin-bottom: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-width: initial;
     width: 100%;
   }
   .features .feature-info div {

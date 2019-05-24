@@ -1,15 +1,18 @@
 .features {
     margin-top: 3rem;
     height: auto;
-    .flex-row();
+
+    //Used for carousel
+/*     .flex-row();
     flex-wrap: nowrap;
     width:100%;
-    overflow-x: hidden;
+    overflow-x: hidden; */
     .feature-info {
         .flex-column(space-between);
         flex-direction: column-reverse;
         height: auto;
         margin-bottom: 6rem;
+        min-width: 90vw;
         p {
             width: 90%;
             font-size: @fontSizeMedium;
@@ -29,8 +32,10 @@
         }
 
         @media @desktopBreakpoint {
+            transform: initial !important;
             margin-bottom: 4rem;
             .flex-row(space-between, center);
+            min-width:initial;
             width: 100%;
             div {
                 width: 30rem;
