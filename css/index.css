@@ -693,7 +693,12 @@ body {
   font-size: 2.4rem;
   width: 60%;
 }
-.top-section button {
+.top-section a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   font-family: 'Roboto Condensed', sans-serif;
   margin-top: 2rem;
   font-size: 2.4rem;
@@ -704,10 +709,12 @@ body {
   color: #F2F2F2;
   width: 80%;
   height: 6rem;
+}
+.top-section a span {
   vertical-align: middle;
 }
 @media (min-width: 1000px) {
-  .top-section button {
+  .top-section a {
     width: 50%;
     border-radius: 2rem;
   }

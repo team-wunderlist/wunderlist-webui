@@ -41,7 +41,7 @@ class Feature {
 
 let featureDataArray = [
     {
-        description: "We make it easy to overview all of your daily tasks coming up so you don't have to wonder what's coming up next. Just open the web app and we'll have your tasks prepared for you. Just take a glance.",
+        description: "We make it easy to overview all of your daily tasks coming up so you don't have to wonder what's coming up next. Just open the web app and we'll have your tasks prepared for you. Take a glance.",
         image: "assets/feature-2.svg"
 
     },
@@ -50,7 +50,7 @@ let featureDataArray = [
         image: "assets/feature-1.svg"
     },
     {
-        description: "We designed our interface to be easy for everyone to use and understand. In a pinch, we make it quick and easy for you to add tasks. With your tasks being hosted in the cloud, you'll never have to second guess if your tasks will be there when you get back, or wehn you open the app on a different device. We've got you covered.",
+        description: "We designed our interface to be easy for everyone to use and understand. In a pinch, we make it quick and easy for you to add tasks. With your tasks being hosted in the cloud, you'll never have to second guess if your tasks will be there when you get back, or when you open the app on a different device. We've got you covered.",
         image: "assets/feature-3.svg"
     },
 ]

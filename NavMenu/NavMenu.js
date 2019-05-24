@@ -306,12 +306,12 @@ let navMenuLinksArray = [
     },
     {
         value: "Login",
-        href: "#",
+        href: "https://eager-archimedes-bdc476.netlify.com/login",
         target: ""
     },
     {
         value: "Sign Up",
-        href: "#",
+        href: "https://eager-archimedes-bdc476.netlify.com/signup",
         target: ""
     },
     {
