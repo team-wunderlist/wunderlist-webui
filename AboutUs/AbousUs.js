@@ -76,6 +76,11 @@ const DeveloperArray = [
         description: "I'm 23 years old and am really just looking expand my knowledge of software development through Lambda School.",
         pictureURI: "AboutUs/profilesImages/christian.jpg"
     },
+    {
+        name: "Thomas Tuttle",
+        description: "I'm an aspiring coconut merchant from Fayetteville NC learning anything I can about software engineering at Lambda School to one day develop the world's finest coconut checker application.",
+        pictureURI: "AboutUs/profilesImages/thomas.jpg"
+    }
 ]
 let developerInfoContainer = document.querySelector(".developer-info");
 DeveloperArray.forEach(dev => {
