@@ -1,0 +1,71 @@
+.nav-button {
+    position: fixed;
+    z-index: 1000;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    width: 4rem;
+    height: 2rem;
+    span {
+        min-width: 4rem;
+        height: 0.1rem;
+        display: block;
+        border: 0.1rem solid @colorWhite;
+    }
+    @media @desktopBreakpoint {
+        display: none;
+    }
+}
+
+.navigation {
+    display: flex;
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    top:0;
+    left:0;
+    background: @backgroundGradient;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: @fontSizeMobileMenu;
+    z-index: 50;
+    color: @colorWhite;
+    font-family: @roboto;
+    clip-path: circle(0px at 100% 0);
+    a{
+        color: inherit;
+        text-decoration:none;
+        z-index: 100;
+    }
+    .nav-background{
+        display: none;
+        @media @desktopBreakpoint{
+            display: initial;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top:0;
+            left:0;
+            background-image: @backgroundGradient;
+            opacity:0;
+        }
+    }
+
+    @media @desktopBreakpoint{
+        clip-path: initial;
+        .flex-row(space-evenly, center);
+        min-width: 100%;
+        min-height: 5rem;
+        background: initial;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-size: @fontSizeDesktopMenu;
+    }
+}

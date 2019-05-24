@@ -1,0 +1,110 @@
+header.page-header {
+    position: relative;
+    width: 100%;
+    height: 15vw;
+    font-family: @roboto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 1rem;
+    .header-background {
+        width: 85vw;
+        height: 85vw;
+        position: absolute;
+        left:0;
+        top: -73vw;
+        z-index: -1;
+        background: @backgroundGradient;
+        border-radius: 33%;
+        transform: rotate(12.73deg);
+
+        @media @desktopBreakpoint {
+            width: 100vw;
+            height: 40vw;
+            border-radius: 12.5vw 14rem;
+            top: 10rem;
+            transform: translateY(-100%) rotate(4deg);
+        }
+    }
+    @media @desktopBreakpoint {
+        height: 18rem;
+        padding-top: 5rem;
+    }
+    h1{
+        color: @colorWhite;
+        font-size: @fontSizeLarge;
+        font-weight: normal;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.developer-info {
+    .flex-column();
+    margin-top: 2.4rem;
+
+    @media @desktopBreakpoint {
+        width: 90%;
+        max-width: 100rem;
+        .flex-row(space-around, flex-start);
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+}
+
+.developer {
+    margin-bottom: 4rem;
+    .flex-column();
+    width: 100%;
+    font-family: @roboto;
+    .profile-picture {
+        width: 50vw;
+        max-width: 20rem;
+        height: 50vw;
+        max-height: 20rem;
+        border-radius: 50%; 
+        background: @backgroundGradient;
+        position: relative;
+        
+        div {
+            position:absolute;
+            top:0;
+            bottom:0;
+            left: 0;
+            right: 0;
+            margin:auto;
+            vertical-align: middle;
+            width: 95%;
+            height: 95%;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    p{
+        font-size: @fontSizeExtraSmall;
+        font-style: italic;
+        color: #4E4E4E;
+        width: 85%;
+        max-width: 30rem;
+    }
+    .name{
+        .flex-row(space-between);
+        width: 50vw;
+        max-width: 20rem;
+        h2 {
+            font-size: @fontSizeSmall;
+            margin: 0 1rem;
+            font-weight: normal;
+        }
+        span{
+            height: 1px;
+            flex-grow: 1;
+            border: .5px solid @colorBlack;
+        }
+    }
+
+    @media @desktopBreakpoint {
+        width: 33%;
+    }
+}

@@ -1,0 +1,74 @@
+.features {
+    margin-top: 3rem;
+    height: auto;
+
+    //Used for carousel
+/*     .flex-row();
+    flex-wrap: nowrap;
+    width:100%;
+    overflow-x: hidden; */
+    .feature-info {
+        .flex-column(space-between);
+        flex-direction: column-reverse;
+        height: auto;
+        margin-bottom: 6rem;
+        min-width: 90vw;
+        p {
+            width: 90%;
+            font-size: @fontSizeMedium;
+            font-family: @robotoCondensed;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        div {
+            border-radius: 5%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            background-position: center;
+            background-size: cover;
+            width: 40rem;
+            height: 40rem;
+            max-width: 80vw;
+            max-height: 80vw;
+        }
+
+        @media @desktopBreakpoint {
+            transform: initial !important;
+            margin-bottom: 4rem;
+            .flex-row(space-between, center);
+            min-width:initial;
+            width: 100%;
+            div {
+                width: 30rem;
+                height: 30rem;
+                max-width: 40%;
+                max-height: 100%;
+            }
+            p {
+                width: 70%;
+                text-align: left;
+            }
+        }
+    }
+
+    @media @desktopBreakpoint{
+        display: initial;
+        .feature-info:nth-child(2n + 2){
+            flex-direction: row-reverse;
+
+            p{
+                text-align: right;
+            }
+        }
+    }
+
+    &.no-image {
+        .feature-info {
+            p {
+                text-align: center;
+                @media @desktopBreakpoint {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
