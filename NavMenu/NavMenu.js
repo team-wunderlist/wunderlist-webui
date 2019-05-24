@@ -60,13 +60,18 @@ class NavMenu {
         if(!this.menuMoving){
             if (this.nav.classList.contains("open")) {
                 this.animateClose();
+                window.wunderlistUtils.enableScroll();
             } else {
+                window.wunderlistUtils.disableScroll();
                 this.animateOpen();
             }
             this.nav.classList.toggle("open");
         }
     }
     itemClick(e) {
+        if(window.wunderlistUtils.GetCurrentBreakpoint !== "desktop"){
+            this.open();
+        }
         TweenMax.fromTo(this.tapLayer, NavMenuAnimationDur * 2,
             {
                 webkitClipPath: `circle(0px at ${e.clientX}px ${e.clientY}px)`,

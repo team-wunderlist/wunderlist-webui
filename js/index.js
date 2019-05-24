@@ -49,3 +49,42 @@ window.wunderlistUtils.GetCurrentBreakpoint = function GetCurrentBreakpoint(){
     });
     return bp;
 }
+
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var scrollKeys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+window.wunderlistUtils.preventDefaultScroll = function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+window.wunderlistUtils.preventDefaultForScrollKeys = function preventDefaultForScrollKeys(e) {
+    if (scrollKeys[e.keyCode]) {
+        window.wunderlistUtils.preventDefaultScroll(e);
+        return false;
+    }
+}
+
+window.wunderlistUtils.disableScroll = function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', window.wunderlistUtils.preventDefaultScroll, false);
+  document.addEventListener('wheel', window.wunderlistUtils.preventDefaultScroll, {passive: false}); // Disable scrolling in Chrome
+  window.onwheel = window.wunderlistUtils.preventDefaultScroll; // modern standard
+  window.onmousewheel = document.onmousewheel = window.wunderlistUtils.preventDefaultScroll; // older browsers, IE
+  window.ontouchmove  = window.wunderlistUtils.preventDefaultScroll; // mobile
+  document.onkeydown  = window.wunderlistUtils.preventDefaultForScrollKeys;
+}
+
+window.wunderlistUtils.enableScroll = function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', window.wunderlistUtils.preventDefaultScroll, false);
+    document.removeEventListener('wheel', window.wunderlistUtils.preventDefaultScroll, {passive: false}); // Enable scrolling in Chrome
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
