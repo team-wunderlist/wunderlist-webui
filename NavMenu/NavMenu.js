@@ -81,7 +81,7 @@ class NavMenu {
     }
     animateOpen() {
         this.menuMoving = true;
-        let diagonal = Math.sqrt((window.innerHeight ** 2) +(window.innerWidth ** 2));
+        let diagonal = Math.sqrt((window.outerHeight ** 2) +(window.outerWidth ** 2));
         TweenMax.fromTo(this.nav, NavMenuAnimationDur,
             {
                 webkitClipPath: "circle(0px at 100% 0)",
